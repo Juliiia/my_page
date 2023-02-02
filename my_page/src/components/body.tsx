@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
+import TopSection from "./topSection";
+import MainSection from "./mainSection";
 
 const StyledBodyDiv = styled.div`
 	height: 100%;
@@ -9,7 +11,11 @@ const StyledBodyDiv = styled.div`
 const Body = () => {
     return (
         <StyledBodyDiv>
-            Test
+            <TopSection />
+            <MainSection
+                title = "UX/UI Design"
+                content = "I’m a UX & UI Designer with experience as a frontend and backend developer."
+            />
         </StyledBodyDiv>
     )
 }
