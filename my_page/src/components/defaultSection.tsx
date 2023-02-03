@@ -5,8 +5,7 @@ import constants from '../assets/js/constants.js'
 const StyledSMainSectionDiv = styled.div`
     padding: 10px;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
 `;
 
 const StyledTitle = styled.h1`
@@ -27,19 +26,20 @@ const StyledParagraph = styled.p`
     font-size: ${constants.fontSizeText};
     font-weight: lighter;
 `;
-//children?: React.ReactNode
 
 type SectionProps = {
     topic: 'design' | 'art';
     title: string;
     content: string;
+    children: string | JSX.Element | JSX.Element[];
 };
 
-const DefaultSection = ({topic, title, content}:SectionProps) => {
+const DefaultSection = ({topic, title, content, children}:SectionProps) => {
     return (
         <StyledSMainSectionDiv>
             <StyledTitle topic={topic}>{title}</StyledTitle>
             <StyledParagraph>{content}</StyledParagraph>
+            {children}
         </StyledSMainSectionDiv>
     )
 };
