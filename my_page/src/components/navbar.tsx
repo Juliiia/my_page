@@ -1,6 +1,7 @@
 // @ts-ignore
 import styled from 'styled-components';
 import React from 'react';
+import constants from '../assets/js/constants.js'
 
 const StyledNavbarDiv = styled.div`
 	height: 50px;
@@ -27,11 +28,12 @@ const StyledNavbarLink = styled.div`
 `;
 
 const StyledNavbarLinkDesign = styled(StyledNavbarLink)`
-    background-color: #E0E7FF;
+    background-color: ${constants.colorDesign1};
+    font-size: ${constants.fontSizeText};
 `;
 
 const StyledNavbarLinkArt = styled(StyledNavbarLink)`
-    background-color: #FFE5BF;
+    background-color: ${constants.colorArt1};
 `;
 
 const Navbar = () => {
