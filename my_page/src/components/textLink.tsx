@@ -4,14 +4,26 @@ import constants from '../assets/js/constants.js'
 
 const StyledLink = styled.a`
     color: ${(props: { topic: string; }) => {
-    if(props.topic == 'design') {
-        return constants.colorDesign2;
-    } else if(props.topic == 'art') {
-        return constants.colorArt2;
-    } else {
-        return 'black';
-    }
-}};
+        if(props.topic == 'design') {
+            return constants.colorDesign2;
+        } else if(props.topic == 'art') {
+            return constants.colorArt2;
+        } else {
+            return 'black';
+        }
+    }};
+    &:hover {
+        color: ${(props: { topic: string; }) => {
+            if(props.topic == 'design') {
+                return constants.colorDesign2;
+            } else if(props.topic == 'art') {
+                return constants.colorArt2;
+            } else {
+                return 'black';
+            }
+        }};
+        text-decoration: underline;
+  }
 `;
 
 type LinkProps = {
