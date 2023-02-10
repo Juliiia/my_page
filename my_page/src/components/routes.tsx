@@ -7,26 +7,10 @@ const routes: RouteObject[] = [
     {
         path: '*',
         element: <LandingPage />,
-        children: [
-            {
-                index: true,
-                element: (
-                    <LandingPage />
-                ),
-            },
-        ],
     },
     {
         path: 'casestudyclimbing',
         element: <CSClimbingPage />,
-        children: [
-            {
-                index: true,
-                element: (
-                    <CSClimbingPage />
-                ),
-            },
-        ],
     },
 ];
 
