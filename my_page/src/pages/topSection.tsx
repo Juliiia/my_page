@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import constants from '../assets/js/constants.js'
-import TextLink from "./textLink";
+import TextLink from "../components/textLink";
 
 const StyledTopSectionDiv = styled.div`
     padding: 10px;

@@ -1,7 +1,7 @@
 import React from "react";
 import {RouteObject} from "react-router";
-import LandingPage from "./LandingPage";
-import CSClimbingPage from "./CSClimbingPage";
+import LandingPage from "../pages/LandingPage";
+import CSClimbingPage from "../pages/CSClimbingPage";
 
 const routes: RouteObject[] = [
     {

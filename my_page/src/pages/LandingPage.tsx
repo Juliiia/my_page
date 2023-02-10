@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
-import DefaultSection from "./defaultSection";
-import DefaultCard from "./defaultCard";
-import DefaultGallery from "./defaultGallery";
+import DefaultSection from "../components/defaultSection";
+import DefaultCard from "../components/defaultCard";
+import DefaultGallery from "../components/defaultGallery";
 import {artGallary} from "../assets/js/artGallery";
 import TopSection from "./topSection";
 
