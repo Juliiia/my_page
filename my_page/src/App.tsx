@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-
+import React from 'react'
+import { useRoutes } from 'react-router-dom';
 import Navbar from "./components/navbar";
-import Body from "./components/body";
+import routes from "./components/routes";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const content = useRoutes(routes);
  //https://dev.to/coderamrin/how-to-build-a-portfolio-website-with-react-tailwind-css-fni
   return (
     <>
         <Navbar />
-        <Body />
+        {content}
     </>
   )
 }

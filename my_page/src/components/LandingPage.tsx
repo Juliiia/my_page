@@ -1,20 +1,16 @@
 import styled from 'styled-components';
 import React from 'react';
-import TopSection from "./topSection";
 import DefaultSection from "./defaultSection";
 import DefaultCard from "./defaultCard";
+import DefaultGallery from "./defaultGallery";
+import {artGallary} from "../assets/js/artGallery";
+import TopSection from "./topSection";
 
-const StyledBodyDiv = styled.div`
-	height: 100%;
-`;
-
-
-const Body = () => {
+const LandingPage = () => {
     return (
         <>
             <TopSection />
-            <StyledBodyDiv>
-                <DefaultSection
+            <DefaultSection
                     topic = "design"
                     title = "UX/UI Design"
                     content = "I’m a UX & UI Designer with experience as a frontend and backend developer."
@@ -25,19 +21,17 @@ const Body = () => {
                         imgSrc = "src/assets/img/logo.jpg"
                         imgAlt = "test"
                     />
-                </DefaultSection>
+            </DefaultSection>
 
-
-
-                <DefaultSection
-                    topic = "art"
-                    title = "Fine Art - Shaps and colors"
-                    content = "My art focuses on colors and shapes mostly created with acrylics and watercolors. I travel a lot and paint in nature, so I also like to use materials from the environment, such as sand and leaves."
-                >
-                </DefaultSection>
-            </StyledBodyDiv>
+            <DefaultSection
+                topic = "art"
+                title = "Fine Art - Shaps and colors"
+                content = "My art focuses on colors and shapes mostly created with acrylics and watercolors. I travel a lot and paint in nature, so I also like to use materials from the environment, such as sand and leaves."
+            >
+                <DefaultGallery imageCollection={artGallary} />
+            </DefaultSection>
         </>
     )
 }
 
-export default Body;
+export default LandingPage;
