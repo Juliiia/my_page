@@ -10,8 +10,10 @@ const StyledSMainSectionDiv = styled.div`
 
 const StyledTitle = styled.h1`
     font-size: ${constants.fontSizeSectionTitle};
-    color: ${(props: { topic: string; }) => {
-        if(props.topic == 'design') {
+    color: ${(props: { topic: string, level: number }) => {
+        if(props.level != 1){
+            return constants.defaultTextColor;
+        } else if (props.topic == 'design') {
             return constants.colorDesign2;
         } else if(props.topic == 'art') {
             return constants.colorArt2;
@@ -22,23 +24,33 @@ const StyledTitle = styled.h1`
     font-weight: bold;
 `;
 
-const StyledParagraph = styled.p`
+const StyledParagraph = styled.div`
     font-size: ${constants.fontSizeText};
     font-weight: lighter;
 `;
 
 type SectionProps = {
     topic: 'design' | 'art';
+    level?: number;
     title: string;
     content: string;
-    children: string | JSX.Element | JSX.Element[];
+    children?: string | JSX.Element | JSX.Element[];
 };
 
-const DefaultSection = ({topic, title, content, children}:SectionProps) => {
+const DefaultSection = ({topic, level = 1, title, content, children}:SectionProps) => {
+
+    const formatText = (text:string) => {
+        if(text.includes('/n')){
+            console.log("includes n");
+            return text.split("/n").map(str => <p>{str}</p>);
+        }
+        return text;
+    }
+
     return (
         <StyledSMainSectionDiv>
-            <StyledTitle topic={topic}>{title}</StyledTitle>
-            <StyledParagraph>{content}</StyledParagraph>
+            <StyledTitle level={level} topic={topic}>{title}</StyledTitle>
+            <StyledParagraph>{formatText(content)}</StyledParagraph>
             {children}
         </StyledSMainSectionDiv>
     )
