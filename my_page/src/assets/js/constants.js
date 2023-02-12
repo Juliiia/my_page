@@ -6,11 +6,13 @@ export default {
     fontSizeSectionTitle: `${basicFontSize + 4}px`,
     fontSizeTopSection: `${basicFontSize + 10}px`,
 
+    defaultTextColor: '#000000',
+
     // color
     colorDesign1: '#e0e7ff', // for background colors
-    colorDesign2: '#9747FF', // for text
+    colorDesign2: '#668aff', // for text
 
     colorArt1: '#FFE5BF', // for background colors
-    colorArt2: '#D89B41', // for text
+    colorArt2: '#ffb84d', // for text
 
 }

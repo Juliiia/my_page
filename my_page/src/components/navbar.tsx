@@ -1,7 +1,7 @@
 // @ts-ignore
 import styled from 'styled-components';
 import React from 'react';
-import constants from '../assets/js/constants.js'
+import constants from '../assets/js/constants.js';
 
 const StyledNavbarDiv = styled.div`
 	height: 50px;
@@ -12,6 +12,7 @@ const StyledNavbarDiv = styled.div`
 
 const StyledNavbarItem = styled.div`
     padding: 10px 5px;
+    cursor: pointer;
 `;
 
 const StyledNavbarLogo = styled.img`    
@@ -23,8 +24,9 @@ const StyledNavbarLogo = styled.img`
     margin-right: 10px;
 `;
 
-const StyledNavbarLink = styled.div`
+const StyledNavbarLink = styled.a`
     padding: 5px;
+    color: ${constants.defaultTextColor};
 `;
 
 const StyledNavbarLinkDesign = styled(StyledNavbarLink)`
@@ -37,6 +39,7 @@ const StyledNavbarLinkArt = styled(StyledNavbarLink)`
 `;
 
 const Navbar = () => {
+
     return (
         <StyledNavbarDiv>
             <StyledNavbarLogo src="src/assets/img/logo.jpg" alt="Logo"/>
