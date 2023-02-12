@@ -3,7 +3,7 @@ import React from 'react';
 import DefaultSection from "../components/defaultSection";
 import DefaultCard from "../components/defaultCard";
 import DefaultGallery from "../components/defaultGallery";
-import {artGallary} from "../assets/js/artGallery";
+import {artGallery} from "../assets/js/artGallery";
 import TopSection from "./topSection";
 
 const LandingPage = () => {
@@ -29,7 +29,7 @@ const LandingPage = () => {
                 title = "Fine Art - Shaps and colors"
                 content = "My art focuses on colors and shapes mostly created with acrylics and watercolors. I travel a lot and paint in nature, so I also like to use materials from the environment, such as sand and leaves."
             >
-                <DefaultGallery imageCollection={artGallary} />
+                <DefaultGallery imageCollection={artGallery} />
             </DefaultSection>
         </>
     )

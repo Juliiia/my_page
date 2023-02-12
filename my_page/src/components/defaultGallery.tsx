@@ -1,28 +1,66 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, {useState} from 'react';
+import ImageLightBox from "./imageLightBox";
 
 const StyledGalleryContainer = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 30px auto;
 `;
 
 const StyledImageContainer = styled.div`
-    width: 50px;
-    height: 50px;
-    background-color: blue;
+    cursor: pointer;
 `;
 
+const StyledImg = styled.img`    
+    margin: auto;
+    max-height: 100%;
+`;
+
+export interface Images {
+    title: string
+    content: string
+    src: string
+    isSold: boolean
+}
+
 type GalleryProps = {
-    imageCollection: Object;
+    imageCollection: Images[];
 }
 
 const DefaultGallery = ({imageCollection}:GalleryProps) => {
+    const [isLightBoxOpen, setIsLightBoxOpen] = useState(false);
+    const [selectedImgIndex, setSelectedImgIndex] = useState(0);
+
+    const onImageClick = (selectedIndex:number) => {
+        setSelectedImgIndex(selectedIndex);
+        setIsLightBoxOpen(true);
+    }
+
+    const closeLightBox = () => {
+        setIsLightBoxOpen(false);
+    }
+
     return (
-        <StyledGalleryContainer>
-            {Object.keys(imageCollection).map((value, index, array) => {
-                console.log(array);
-                return <StyledImageContainer>{value[3]}</StyledImageContainer>;
-            })}
-        </StyledGalleryContainer>
+        <>
+            <StyledGalleryContainer>
+                {imageCollection.map((data, key) => {
+                    console.log(data);
+                    return <StyledImageContainer key={key} onClick={onImageClick}>
+                        <StyledImg src={data.src} alt={data.title} />
+                    </StyledImageContainer>;
+                })}
+
+            </StyledGalleryContainer>
+            <ImageLightBox
+                imageCollection={imageCollection}
+                selectedIndex={selectedImgIndex}
+                isOpen={isLightBoxOpen}
+                onCloseLightBox={closeLightBox}
+            />
+        </>
     )
 };
 
