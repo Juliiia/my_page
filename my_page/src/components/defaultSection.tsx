@@ -14,9 +14,9 @@ const StyledTitle = styled.h1`
         if(props.level != 1){
             return constants.defaultTextColor;
         } else if (props.topic == 'design') {
-            return constants.colorDesign2;
+            return constants.colorDesign3;
         } else if(props.topic == 'art') {
-            return constants.colorArt2;
+            return constants.colorArt3;
         } else {
             return 'black';
         }

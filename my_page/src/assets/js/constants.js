@@ -10,9 +10,11 @@ export default {
 
     // color
     colorDesign1: '#e0e7ff', // for background colors
-    colorDesign2: '#668aff', // for text
+    colorDesign2: '#b3c4ff',
+    colorDesign3: '#668aff', // for text
 
     colorArt1: '#FFE5BF', // for background colors
-    colorArt2: '#ffb84d', // for text
+    colorArt2: '#ffd699',
+    colorArt3: '#ffb84d', // for text
 
 }

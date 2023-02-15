@@ -32,10 +32,19 @@ const StyledNavbarLink = styled.a`
 const StyledNavbarLinkDesign = styled(StyledNavbarLink)`
     background-color: ${constants.colorDesign1};
     font-size: ${constants.fontSizeText};
+    :hover {
+        color: ${constants.defaultTextColor};
+        background-color: ${constants.colorDesign2};
+    }
 `;
 
 const StyledNavbarLinkArt = styled(StyledNavbarLink)`
     background-color: ${constants.colorArt1};
+    font-size: ${constants.fontSizeText};
+    :hover {
+        color: ${constants.defaultTextColor};
+        background-color: ${constants.colorArt2};
+    }
 `;
 
 const Navbar = () => {

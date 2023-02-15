@@ -3,17 +3,20 @@ import React from 'react';
 import constants from '../assets/js/constants.js'
 
 const StyledLink = styled.a`
-    color: ${(props: { topic: string; }) => {
+    cursor: pointer;
+    color: ${constants.defaultTextColor};
+    background-color: ${(props: { topic: string; }) => {
         if(props.topic == 'design') {
-            return constants.colorDesign2;
+            return constants.colorDesign1;
         } else if(props.topic == 'art') {
-            return constants.colorArt2;
+            return constants.colorArt1;
         } else {
             return 'black';
         }
     }};
     &:hover {
-        color: ${(props: { topic: string; }) => {
+        color: ${constants.defaultTextColor};
+        background-color: ${(props: { topic: string; }) => {
             if(props.topic == 'design') {
                 return constants.colorDesign2;
             } else if(props.topic == 'art') {
@@ -22,7 +25,7 @@ const StyledLink = styled.a`
                 return 'black';
             }
         }};
-        text-decoration: underline;
+        text-decoration: none;
   }
 `;
 
