@@ -13,13 +13,18 @@ const StyledLightBoxContainer = styled.div`
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     display: ${(props: {isVisible:boolean}) => (props.isVisible? 'grid' : 'none')};
-    grid-template-columns: 20px auto 20px;
+    grid-template-columns: 30px auto 30px;
+`;
+
+const StyledLinkContainer = styled.div`
+    display: flex;
 `;
 
 const StyledLink = styled.a`    
-    background-color: red;
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
 `;
 
 const StyledImageContainer = styled.div`
@@ -29,7 +34,7 @@ const StyledImageContainer = styled.div`
 
 const StyledImg = styled.img`    
     margin: auto;
-    width: 90%;
+    width: 95%;
 `;
 
 type LightBoxProps = {
@@ -41,18 +46,21 @@ type LightBoxProps = {
 
 const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}:LightBoxProps) => {
     const [selectedImg, setSelectedImg] = useState(imageCollection[selectedIndex]);
-    const backgroundRef = useRef(null);
+    const imageContainer = useRef(null);
     const imageRef = useRef(null);
 
-
+   useEffect(() => {
+        setSelectedImg(imageCollection[selectedIndex]);
+    }, [isOpen]);
 
     const onBackgroundClick = (event: MouseEvent) => {
         // improve: https://usehooks-ts.com/react-hook/use-on-click-outside
-        const currentBackground = backgroundRef?.current;
+        const currentImageContainer = imageContainer?.current;
         const currentImage = imageRef?.current;
 
         // Do nothing if clicking ref's element or descendent elements
-        if (currentBackground && currentImage && currentBackground.contains(event.target) && !currentImage.contains(event.target) ) {
+        if (currentImageContainer && currentImage && currentImageContainer.contains(event.target) && !currentImage.contains(event.target) ) {
+            console.log("close");
             onCloseLightBox();
         }
     }
@@ -70,18 +78,32 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
     }
 
     return (
-        <StyledLightBoxContainer ref={backgroundRef} onClick={(event: MouseEvent) => onBackgroundClick(event)} isVisible={isOpen}>
-            <StyledLink onClick={getPrevious}>
-                <img src="src/assets/img/left-arrow.png"
-                     title="previous"/>
-            </StyledLink>
-                <StyledImageContainer>
-                    <StyledImg ref={imageRef} src={selectedImg.src} alt={selectedImg.title} />
-                </StyledImageContainer>
-            <StyledLink onClick={getNext}>
-                <img src="src/assets/img/right-arrow.png"
-                     title="next"/>
-            </StyledLink>
+        <StyledLightBoxContainer isVisible={isOpen}>
+
+            <StyledLinkContainer>
+                <StyledLink onClick={getPrevious}>
+                    <img src="src/assets/img/left-arrow.png"
+                         title="previous"/>
+                </StyledLink>
+            </StyledLinkContainer>
+
+            <StyledImageContainer
+                ref={imageContainer}
+                onClick={(event: MouseEvent) => onBackgroundClick(event)}>
+                <StyledImg
+                    ref={imageRef}
+                    src={selectedImg.src}
+                    alt={selectedImg.title} />
+            </StyledImageContainer>
+
+            <StyledLinkContainer>
+                <StyledLink onClick={getNext}>
+                    <img
+                        src="src/assets/img/right-arrow.png"
+                        title="next"/>
+                </StyledLink>
+            </StyledLinkContainer>
+
         </StyledLightBoxContainer>
     )
 }

@@ -47,8 +47,7 @@ const DefaultGallery = ({imageCollection}:GalleryProps) => {
         <>
             <StyledGalleryContainer>
                 {imageCollection.map((data, key) => {
-                    console.log(data);
-                    return <StyledImageContainer key={key} onClick={onImageClick}>
+                    return <StyledImageContainer key={key} onClick={() => onImageClick(key)}>
                         <StyledImg src={data.src} alt={data.title} />
                     </StyledImageContainer>;
                 })}
