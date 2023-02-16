@@ -8,7 +8,7 @@ const StyledTopSectionDiv = styled.div`
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-size: ${constants.fontSizeTopSection};
+    font-size: ${constants.fontSizeBigText};
     line-height: initial;
 `;
 

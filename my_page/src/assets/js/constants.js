@@ -4,7 +4,7 @@ export default {
     // font sizes
     fontSizeText: `${basicFontSize}px`,
     fontSizeSectionTitle: `${basicFontSize + 4}px`,
-    fontSizeTopSection: `${basicFontSize + 10}px`,
+    fontSizeBigText: `${basicFontSize + 10}px`,
 
     defaultTextColor: '#000000',
 
@@ -16,5 +16,8 @@ export default {
     colorArt1: '#FFE5BF', // for background colors
     colorArt2: '#ffd699',
     colorArt3: '#ffb84d', // for text
+
+    // section colors
+    darkSection: '#d1c7ca',
 
 }

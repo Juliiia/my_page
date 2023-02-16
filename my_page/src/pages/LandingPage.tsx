@@ -1,10 +1,10 @@
-import styled from 'styled-components';
 import React from 'react';
 import DefaultSection from "../components/defaultSection";
 import DefaultCard from "../components/defaultCard";
 import DefaultGallery from "../components/defaultGallery";
 import {artGallery} from "../assets/js/artGallery";
-import TopSection from "./topSection";
+import TopSection from "./TopSection";
+import Footer from "./Footer";
 
 const LandingPage = () => {
     return (
@@ -31,6 +31,7 @@ const LandingPage = () => {
             >
                 <DefaultGallery imageCollection={artGallery} />
             </DefaultSection>
+            <Footer />
         </>
     )
 }

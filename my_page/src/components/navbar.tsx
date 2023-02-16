@@ -2,12 +2,15 @@
 import styled from 'styled-components';
 import React from 'react';
 import constants from '../assets/js/constants.js';
+import { useNavigate } from "react-router-dom";
 
 const StyledNavbarDiv = styled.div`
 	height: 50px;
 	position: sticky;
     top: 0px;
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
 `;
 
 const StyledNavbarItem = styled.div`
@@ -22,6 +25,7 @@ const StyledNavbarLogo = styled.img`
     margin-bottom: auto;
     margin-left: 5px;
     margin-right: 10px;
+    cursor: pointer;
 `;
 
 const StyledNavbarLink = styled.a`
@@ -48,10 +52,17 @@ const StyledNavbarLinkArt = styled(StyledNavbarLink)`
 `;
 
 const Navbar = () => {
+    const navigate = useNavigate();
 
     return (
         <StyledNavbarDiv>
-            <StyledNavbarLogo src="src/assets/img/logo.jpg" alt="Logo"/>
+            <StyledNavbarLogo
+                src="src/assets/img/logo.jpg"
+                alt="Logo"
+                onClick={() => {
+                    navigate('/');
+                }}
+            />
             <StyledNavbarItem>
                 <StyledNavbarLinkDesign>
                     UX UI Design
