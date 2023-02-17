@@ -21,6 +21,7 @@ const LandingPage = () => {
                         imgSrc = "src/assets/img/logo.jpg"
                         imgAlt = "test"
                         goToLink = "/casestudyclimbing"
+                        labels={['Case Study', 'UX Research', 'UX&UI Design']}
                     />
             </DefaultSection>
 

@@ -5,7 +5,7 @@ import TextLink from "../components/textLink";
 
 const StyledTopSectionDiv = styled.div`
     padding: 10px;
-    max-width: 600px;
+    max-width: ${constants.sectionMaxWidthDefault};
     margin-left: auto;
     margin-right: auto;
     font-size: ${constants.fontSizeBigText};

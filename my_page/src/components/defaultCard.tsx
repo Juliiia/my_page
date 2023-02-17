@@ -19,6 +19,14 @@ const StyledContentContainer = styled.div`
     color: ${constants.defaultTextColor};
 `;
 
+const StyledTitle = styled.span`
+    font-weight: bold;
+`;
+
+const StyledLabels = styled.div`
+    text-align: end;
+`;
+
 const StyledImg = styled.img`    
     display: block;
     margin: auto;
@@ -31,17 +39,27 @@ type CardProps = {
     imgSrc: string;
     imgAlt: string;
     goToLink: string;
+    labels: string[];
 };
 
-const DefaultCard = ({title, content, imgSrc, imgAlt, goToLink}:CardProps) =>{
+const DefaultCard = ({title, content, imgSrc, imgAlt, goToLink, labels}:CardProps) =>{
     const navigate = useNavigate();
+
+    const renderLabels = () => {
+        return labels.map(label => {
+            return <span>{label}</span>;
+        });
+    };
 
     return (
         <StyledCardDiv onClick={() => {
             navigate(goToLink);
         }}>
             <StyledContentContainer>
-                <h3>{title}</h3>
+                <StyledLabels>
+                    {renderLabels()}
+                </StyledLabels>
+                <StyledTitle>{title}</StyledTitle>
                 <p>{content}</p>
             </StyledContentContainer>
             <div>

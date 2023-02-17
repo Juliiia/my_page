@@ -4,7 +4,7 @@ import constants from '../assets/js/constants.js'
 
 const StyledSMainSectionDiv = styled.div`
     padding: 10px;
-    max-width: 600px;
+    max-width: ${constants.sectionMaxWidthDefault};
     margin: 30px auto;
 `;
 
