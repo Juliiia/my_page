@@ -17,6 +17,8 @@ const StyledTitle = styled.h1`
             return constants.colorDesign3;
         } else if(props.topic == 'art') {
             return constants.colorArt3;
+        } else if(props.topic == 'other') {
+            return constants.colorMe1;
         } else {
             return 'black';
         }
@@ -30,7 +32,7 @@ const StyledParagraph = styled.div`
 `;
 
 type SectionProps = {
-    topic: 'design' | 'art';
+    topic: 'design' | 'art' | 'other';
     level?: number;
     title: string;
     content: string;

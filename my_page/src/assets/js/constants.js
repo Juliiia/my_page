@@ -21,6 +21,8 @@ export default {
     colorArt2: '#ffd699',
     colorArt3: '#ffb84d', // for text
 
+    colorMe1: '#b2a1a6',
+
     // section colors
     darkSection: '#d1c7ca',
 

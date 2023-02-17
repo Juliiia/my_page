@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import constants from '../assets/js/constants.js';
-import TextLink from "../components/textLink";
 
 const StyledFooterContainer = styled.div`
     background-color: ${constants.darkSection};
@@ -9,12 +8,6 @@ const StyledFooterContainer = styled.div`
     justify-content: space-between;
     align-items: flex-end;
     padding: 20px 5px;
-`;
-
-const StyledTextContainer = styled.p`
-    padding: 5px;
-    font-size: ${constants.fontSizeBigText};
-    line-height: initial;
 `;
 
 const StyledSocialLinkContainer = styled.div`
@@ -34,9 +27,7 @@ const StyledSocialImg = styled.img`
 const Footer = () => {
     return (
         <StyledFooterContainer>
-            <StyledTextContainer>
-                If you are interested in my <TextLink topic={'art'} linkTo={'test'}>art</TextLink> or if I can help you with <TextLink topic={'design'} linkTo={'test'}>UX/UI topics</TextLink>, write me at: <TextLink topic={'design'} linkTo={'test'}>mail@juliamucha.de</TextLink>
-            </StyledTextContainer>
+            <div></div>
             <StyledSocialLinkContainer>
                 <StyledSocialLink>
                     <StyledSocialImg src="src/assets/img/mail.png" alt="Mail" />

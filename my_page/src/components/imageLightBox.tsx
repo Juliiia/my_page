@@ -30,11 +30,19 @@ const StyledLink = styled.a`
 const StyledImageContainer = styled.div`
     padding: 10px;
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+`;
+
+const StyledImageLabel = styled.div`
+    
 `;
 
 const StyledImg = styled.img`    
     margin: auto;
     width: 95%;
+    max-height: 800px;
+    object-fit: contain;
 `;
 
 type LightBoxProps = {
@@ -48,6 +56,8 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
     const [selectedImg, setSelectedImg] = useState(imageCollection[selectedIndex]);
     const imageContainer = useRef(null);
     const imageRef = useRef(null);
+
+    console.log(selectedImg);
 
    useEffect(() => {
         setSelectedImg(imageCollection[selectedIndex]);
@@ -93,7 +103,12 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
                 <StyledImg
                     ref={imageRef}
                     src={selectedImg.src}
-                    alt={selectedImg.title} />
+                    alt={selectedImg.title}
+                />
+                <StyledImageLabel>
+                    {selectedImg.title}
+                    {selectedImg.content}
+                </StyledImageLabel>
             </StyledImageContainer>
 
             <StyledLinkContainer>
