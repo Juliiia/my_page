@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React, {useEffect, useRef, useState} from 'react';
 import {Images} from "./defaultGallery";
+import constants from '../assets/js/constants.js'
+import ImageLabelAndContent from "./imageLabelAndContent";
 
 const StyledLightBoxContainer = styled.div`
     z-index: 100;
@@ -11,9 +13,9 @@ const StyledLightBoxContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255,0.5);
     display: ${(props: {isVisible:boolean}) => (props.isVisible? 'grid' : 'none')};
-    grid-template-columns: 30px auto 30px;
+    grid-template-columns: 40px auto 40px;
 `;
 
 const StyledLinkContainer = styled.div`
@@ -25,17 +27,20 @@ const StyledLink = styled.a`
     width: 100%;
     display: flex;
     align-items: center;
+    background-color: ${constants.colorArt1}
 `;
 
 const StyledImageContainer = styled.div`
     padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 `;
 
-const StyledImageLabel = styled.div`
-    
+const StyledImageContentFrame = styled.div`
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #f2f2f2;
 `;
 
 const StyledImg = styled.img`    
@@ -56,8 +61,6 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
     const [selectedImg, setSelectedImg] = useState(imageCollection[selectedIndex]);
     const imageContainer = useRef(null);
     const imageRef = useRef(null);
-
-    console.log(selectedImg);
 
    useEffect(() => {
         setSelectedImg(imageCollection[selectedIndex]);
@@ -100,15 +103,14 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
             <StyledImageContainer
                 ref={imageContainer}
                 onClick={(event: MouseEvent) => onBackgroundClick(event)}>
-                <StyledImg
-                    ref={imageRef}
-                    src={selectedImg.src}
-                    alt={selectedImg.title}
-                />
-                <StyledImageLabel>
-                    {selectedImg.title}
-                    {selectedImg.content}
-                </StyledImageLabel>
+                <StyledImageContentFrame>
+                    <StyledImg
+                        ref={imageRef}
+                        src={selectedImg.src}
+                        alt={selectedImg.title}
+                    />
+                    <ImageLabelAndContent selectedImg={selectedImg}/>
+                </StyledImageContentFrame>
             </StyledImageContainer>
 
             <StyledLinkContainer>

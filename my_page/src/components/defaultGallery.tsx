@@ -23,6 +23,7 @@ export interface Images {
     title: string
     content: string
     src: string
+    size: string
     isSold: boolean
 }
 
