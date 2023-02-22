@@ -35,6 +35,9 @@ const Footer = () => {
                 <StyledSocialLink>
                     <StyledSocialImg src="src/assets/img/instagram.png" alt="Instagram" />
                 </StyledSocialLink>
+                <StyledSocialLink>
+                    <StyledSocialImg src="src/assets/img/linkedin-logo.png" alt="LinkedIn" />
+                </StyledSocialLink>
             </StyledSocialLinkContainer>
         </StyledFooterContainer>
     )

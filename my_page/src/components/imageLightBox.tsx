@@ -20,14 +20,18 @@ const StyledLightBoxContainer = styled.div`
 
 const StyledLinkContainer = styled.div`
     display: flex;
+    align-items: center;
 `;
 
 const StyledLink = styled.a`    
-    height: 100%;
     width: 100%;
+    height: 100px;
     display: flex;
     align-items: center;
-    background-color: ${constants.colorArt1}
+    background-color: ${constants.colorArt1};
+    :hover {
+        background-color: ${constants.colorArt2};
+    }
 `;
 
 const StyledImageContainer = styled.div`
@@ -35,6 +39,12 @@ const StyledImageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+    ::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+    }
 `;
 
 const StyledImageContentFrame = styled.div`
@@ -45,7 +55,7 @@ const StyledImageContentFrame = styled.div`
 
 const StyledImg = styled.img`    
     margin: auto;
-    width: 95%;
+    width: 100%;
     max-height: 800px;
     object-fit: contain;
 `;
@@ -60,20 +70,25 @@ type LightBoxProps = {
 const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}:LightBoxProps) => {
     const [selectedImg, setSelectedImg] = useState(imageCollection[selectedIndex]);
     const imageContainer = useRef(null);
-    const imageRef = useRef(null);
+    const imageFrameRef = useRef(null);
 
    useEffect(() => {
         setSelectedImg(imageCollection[selectedIndex]);
+
+        if(isOpen){
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.removeProperty('overflow');
+        }
     }, [isOpen]);
 
     const onBackgroundClick = (event: MouseEvent) => {
         // improve: https://usehooks-ts.com/react-hook/use-on-click-outside
         const currentImageContainer = imageContainer?.current;
-        const currentImage = imageRef?.current;
+        const currentImageFrame = imageFrameRef?.current;
 
         // Do nothing if clicking ref's element or descendent elements
-        if (currentImageContainer && currentImage && currentImageContainer.contains(event.target) && !currentImage.contains(event.target) ) {
-            console.log("close");
+        if (currentImageContainer && currentImageFrame && currentImageContainer.contains(event.target) && !currentImageFrame.contains(event.target)) {
             onCloseLightBox();
         }
     }
@@ -102,10 +117,10 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
 
             <StyledImageContainer
                 ref={imageContainer}
-                onClick={(event: MouseEvent) => onBackgroundClick(event)}>
-                <StyledImageContentFrame>
+                onClick={(event: MouseEvent) => onBackgroundClick(event)}
+            >
+                <StyledImageContentFrame ref={imageFrameRef}>
                     <StyledImg
-                        ref={imageRef}
                         src={selectedImg.src}
                         alt={selectedImg.title}
                     />

@@ -19,12 +19,18 @@ const StyledImg = styled.img`
     max-height: 100%;
 `;
 
+export interface ImageInfo {
+    src: string
+    content: string
+}
+
 export interface Images {
     title: string
     content: string
     src: string
     size: string
     isSold: boolean
+    imageInfo: ImageInfo[]
 }
 
 type GalleryProps = {

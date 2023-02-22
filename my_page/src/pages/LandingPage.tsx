@@ -19,20 +19,19 @@ const LandingPage = () => {
         <>
             <TopSection />
             <DefaultSection
-                    topic = "design"
-                    title = "UX/UI Design"
-                    content = "I’m a UX & UI Designer with experience as a frontend and backend developer."
-                >
-                    <DefaultCard
-                        title = "Redesign of Climbing App"
-                        content = "The Climbing Diary is an Android App for climbers and boulderers to log their projects and ascents. The goal of the case study is a redesign by focusing on the main functionalities the user expects from a climbing App. Therefore, we conducted a user survey and a comparison of other famous applications in this area."
-                        imgSrc = "src/assets/img/logo.jpg"
-                        imgAlt = "test"
-                        goToLink = "/casestudyclimbing"
-                        labels={['Case Study', 'UX Research', 'UX&UI Design']}
-                    />
+                topic = "design"
+                title = "UX/UI Design"
+                content = "I’m a UX & UI Designer with experience as a frontend and backend developer."
+            >
+                <DefaultCard
+                    title = "Redesign of Climbing App"
+                    content = "The Climbing Diary is an Android App for climbers and boulderers to log their projects and ascents. The goal of the case study is a redesign by focusing on the main functionalities the user expects from a climbing App. Therefore, we conducted a user survey and a comparison of other famous applications in this area."
+                    imgSrc = "src/assets/img/logo.jpg"
+                    imgAlt = "test"
+                    goToLink = "/casestudyclimbing"
+                    labels={['Case Study', 'UX Research', 'UX&UI Design']}
+                />
             </DefaultSection>
-
             <DefaultSection
                 topic = "art"
                 title = "Fine Art - Shaps and colors"

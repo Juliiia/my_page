@@ -1,17 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {Images} from "./defaultGallery";
+import constants from "../assets/js/constants";
+import {data} from "autoprefixer";
+import DefaultSection from "./defaultSection";
 
 const StyledImageLabel = styled.div`
     margin-top: 10px;
 `;
 
 const StyledLabel = styled.div`
-    padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
+`;
+
+const StyledLink = styled.a`    
+    background-color: ${constants.colorArt1};
+    :hover {
+        background-color: ${constants.colorArt2};
+    }
+`;
+
+const StyledIcon = styled.img`
+    width: 30px;
+    transform: ${(props: {show:boolean}) => (props.show? 'rotate(90deg)' : 'rotate(0deg)')};
 `;
 
 const StyledImageTitle = styled.span`
@@ -27,16 +42,34 @@ type ImageLabelAndContentProps = {
 }
 
 const ImageLabelAndContent = ({selectedImg}:ImageLabelAndContentProps) => {
+    const [showMore, setShowMore] = useState(false);
+
+    const toggleShowMore = () => {
+        setShowMore(!showMore);
+    }
 
     return (
         <StyledImageLabel>
             <StyledLabel>
-                <StyledImageTitle>{selectedImg.title}</StyledImageTitle>
-                <StyledSize>{selectedImg.size}</StyledSize>
+                {(selectedImg.imageInfo && selectedImg.imageInfo.length > 0) &&
+                    <StyledLink onClick={() => toggleShowMore()}>
+                        <StyledIcon src="src/assets/img/right-arrow.png" title="show more" show={showMore}/>
+                    </StyledLink>
+                }
+                <StyledImageTitle>
+                    {selectedImg.title}
+                </StyledImageTitle>
+                <StyledSize>
+                    {selectedImg.size}
+                </StyledSize>
             </StyledLabel>
-            <div>
-                more
-            </div>
+            {(showMore && selectedImg.imageInfo && selectedImg.imageInfo.length > 0) &&
+                <div>
+                    {selectedImg.imageInfo.map((value, index) => (
+                        <DefaultSection topic={'art'} title={'Story'} content={value.content} />
+                    ))}
+                </div>
+            }
         </StyledImageLabel>
     )
 }
