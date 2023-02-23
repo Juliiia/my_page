@@ -26,33 +26,19 @@ const StyledTitle = styled.h1`
     font-weight: bold;
 `;
 
-const StyledParagraph = styled.div`
-    font-size: ${constants.fontSizeText};
-    font-weight: lighter;
-`;
-
 type SectionProps = {
     topic: 'design' | 'art' | 'other';
     level?: number;
     title: string;
-    content: string;
+    content?: string;
     children?: string | JSX.Element | JSX.Element[];
 };
 
 const DefaultSection = ({topic, level = 1, title, content, children}:SectionProps) => {
 
-    const formatText = (text:string) => {
-        if(text.includes('/n')){
-            console.log("includes n");
-            return text.split("/n").map(str => <p>{str}</p>);
-        }
-        return text;
-    }
-
     return (
         <StyledSMainSectionDiv>
             <StyledTitle level={level} topic={topic}>{title}</StyledTitle>
-            <StyledParagraph>{formatText(content)}</StyledParagraph>
             {children}
         </StyledSMainSectionDiv>
     )

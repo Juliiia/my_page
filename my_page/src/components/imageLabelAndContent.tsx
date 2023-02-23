@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {Images} from "./defaultGallery";
 import constants from "../assets/js/constants";
-import {data} from "autoprefixer";
 import DefaultSection from "./defaultSection";
 
 const StyledImageLabel = styled.div`
@@ -66,7 +65,12 @@ const ImageLabelAndContent = ({selectedImg}:ImageLabelAndContentProps) => {
             {(showMore && selectedImg.imageInfo && selectedImg.imageInfo.length > 0) &&
                 <div>
                     {selectedImg.imageInfo.map((value, index) => (
-                        <DefaultSection topic={'art'} title={'Story'} content={value.content} />
+                        <DefaultSection
+                            topic={'art'}
+                            title={'Story'}
+                        >
+                            {value.content}
+                        </DefaultSection>
                     ))}
                 </div>
             }

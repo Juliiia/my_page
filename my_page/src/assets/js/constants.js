@@ -8,6 +8,7 @@ export default {
     fontSizeText: `${basicFontSize}px`,
     fontSizeSectionTitle: `${basicFontSize + 4}px`,
     fontSizeBigText: `${basicFontSize + 10}px`,
+    fontSizeSmallText: `${basicFontSize - 4}px`,
 
     // color
     defaultTextColor: '#000000',

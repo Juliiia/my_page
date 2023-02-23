@@ -29,13 +29,13 @@ const Footer = () => {
         <StyledFooterContainer>
             <div></div>
             <StyledSocialLinkContainer>
-                <StyledSocialLink>
+                <StyledSocialLink href="mailto:info@juliamucha.de?subject=Mail from juliamucha.de">
                     <StyledSocialImg src="src/assets/img/mail.png" alt="Mail" />
                 </StyledSocialLink>
-                <StyledSocialLink>
+                <StyledSocialLink href="https://www.instagram.com/julia_farbe/" target="_blank">
                     <StyledSocialImg src="src/assets/img/instagram.png" alt="Instagram" />
                 </StyledSocialLink>
-                <StyledSocialLink>
+                <StyledSocialLink href="https://www.linkedin.com/in/julia-krause-b543a912a/" target="_blank">
                     <StyledSocialImg src="src/assets/img/linkedin-logo.png" alt="LinkedIn" />
                 </StyledSocialLink>
             </StyledSocialLinkContainer>

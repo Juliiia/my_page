@@ -65,7 +65,11 @@ const Navbar = () => {
                 }}
             />
             <StyledNavbarItem>
-                <StyledNavbarLinkDesign>
+                <StyledNavbarLinkDesign
+                    onClick={() => {
+                        navigate('/');
+                    }}
+                >
                     UX UI Design
                 </StyledNavbarLinkDesign>
             </StyledNavbarItem>
