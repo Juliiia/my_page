@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import React from 'react';
 import constants from '../assets/js/constants.js';
 import { useNavigate } from "react-router-dom";
+import { useNavbarHook } from "../context/NavbarHook";
+import {Images} from "./defaultGallery";
 
 const StyledNavbarDiv = styled.div`
 	height: 50px;
@@ -52,13 +54,17 @@ const StyledNavbarLinkArt = styled(StyledNavbarLink)`
     }
 `;
 
-const Navbar = () => {
+type NavbarProps = {
+    onButtonClicked:(c: string) => void;
+}
+
+const Navbar = ({onButtonClicked}:NavbarProps) => {
     const navigate = useNavigate();
 
     return (
         <StyledNavbarDiv>
             <StyledNavbarLogo
-                src="src/assets/img/logo.jpg"
+                src="src/assets/img/logo.png"
                 alt="Logo"
                 onClick={() => {
                     navigate('/');
@@ -67,14 +73,18 @@ const Navbar = () => {
             <StyledNavbarItem>
                 <StyledNavbarLinkDesign
                     onClick={() => {
-                        navigate('/');
+                        onButtonClicked('design');
                     }}
                 >
                     UX UI Design
                 </StyledNavbarLinkDesign>
             </StyledNavbarItem>
             <StyledNavbarItem>
-                <StyledNavbarLinkArt>
+                <StyledNavbarLinkArt
+                    onClick={() => {
+                        onButtonClicked('art');
+                    }}
+                >
                     Fine Art
                 </StyledNavbarLinkArt>
             </StyledNavbarItem>

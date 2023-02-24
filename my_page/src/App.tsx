@@ -1,14 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useRoutes } from 'react-router-dom';
 import Navbar from "./components/navbar";
-import routes from "./components/routes";
+import {RouteObject} from "react-router";
+import LandingPage from "./pages/LandingPage";
+import CSClimbingPage from "./pages/CSClimbingPage";
+import {NavbarContext} from "./context/NavbarContext";
 
 function App() {
+    const [navbarButtonClicked, setNavbarButtonClicked] = useState('');
+
+    const routes: RouteObject[] = [
+        {
+            path: '*',
+            element: <LandingPage navbarClickedButton={navbarButtonClicked}/>,
+        },
+        {
+            path: 'casestudyclimbing',
+            element: <CSClimbingPage />,
+        },
+    ];
+
     const content = useRoutes(routes);
  //https://dev.to/coderamrin/how-to-build-a-portfolio-website-with-react-tailwind-css-fni
-  return (
+
+    return (
     <>
-        <Navbar />
+        <Navbar onButtonClicked={setNavbarButtonClicked}/>
         {content}
     </>
   )

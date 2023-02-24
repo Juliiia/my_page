@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import DefaultSection from "../components/defaultSection";
 import DefaultCard from "../components/defaultCard";
 import DefaultGallery from "../components/defaultGallery";
@@ -8,12 +8,22 @@ import Footer from "./Footer";
 import TextLink from "../components/textLink";
 import DefaultParagraph from "../components/defaultParagraph";
 
-const LandingPage = () => {
+type LandingPageProps = {
+    navbarClickedButton: string;
+}
+
+const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
     const uxuiSectionRef = useRef(null);
     const artSectionRef = useRef(null);
 
-    const executeScrollTo = () => myRef.current.scrollIntoView()
-    // run this function from an event handler or an effect to execute scroll
+    useEffect(() => {
+        console.log('navbar clicked ' + navbarClickedButton);
+        if(navbarClickedButton == 'design' && uxuiSectionRef){
+            uxuiSectionRef.current?.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+        } else if (navbarClickedButton == 'art' && artSectionRef) {
+            artSectionRef.current?.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+        }
+    }, [navbarClickedButton]);
 
     return (
         <>
