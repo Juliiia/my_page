@@ -1,8 +1,10 @@
-import styled from 'styled-components';
 import React, {useEffect, useRef, useState} from 'react';
-import {Images} from "./defaultGallery";
-import constants from '../assets/js/constants.js'
-import ImageLabelAndContent from "./imageLabelAndContent";
+import styled from 'styled-components';
+import {Images} from "../defaultGallery";
+import constants from '../../assets/js/constants.js'
+import ImageLabelAndContent from "./components/imageLabelAndContent";
+import {NextButton, PreviousButton} from "./components/Buttons";
+import {ButtonsBar} from "./components/ButtonsBar";
 
 const StyledLightBoxContainer = styled.div`
     z-index: 100;
@@ -13,28 +15,19 @@ const StyledLightBoxContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.9);
     display: ${(props: {isVisible:boolean}) => (props.isVisible? 'grid' : 'none')};
     grid-template-columns: 40px auto 40px;
-`;
-
-const StyledLinkContainer = styled.div`
-    display: flex;
     align-items: center;
-`;
-
-const StyledLink = styled.a`    
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    background-color: ${constants.colorArt1};
-    :hover {
-        background-color: ${constants.colorArt2};
+    @media (max-width: ${constants.mobileScreenSize}) {
+        display: ${(props: {isVisible:boolean}) => (props.isVisible? 'flex' : 'none')};
+        flex-direction: column;
+        justify-content: center;
     }
 `;
 
 const StyledImageContainer = styled.div`
+    height: 100%;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -42,6 +35,7 @@ const StyledImageContainer = styled.div`
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll; 
+    justify-content: center;
     ::-webkit-scrollbar {
         display: none; /* for Chrome, Safari, and Opera */
     }
@@ -106,18 +100,21 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
     }
 
     return (
-        <StyledLightBoxContainer isVisible={isOpen}>
+        <StyledLightBoxContainer
+            isVisible={isOpen}
+            onClick={(event: MouseEvent) => onBackgroundClick(event)}
+        >
 
-            <StyledLinkContainer>
-                <StyledLink onClick={getPrevious}>
-                    <img src="src/assets/img/left-arrow.png"
-                         title="previous"/>
-                </StyledLink>
-            </StyledLinkContainer>
+            <ButtonsBar
+                onPrevious={getPrevious}
+                onClose={onCloseLightBox}
+                onNext={getNext}
+            />
+
+            <PreviousButton onClickAction={getPrevious} />
 
             <StyledImageContainer
                 ref={imageContainer}
-                onClick={(event: MouseEvent) => onBackgroundClick(event)}
             >
                 <StyledImageContentFrame ref={imageFrameRef}>
                     <StyledImg
@@ -128,13 +125,7 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
                 </StyledImageContentFrame>
             </StyledImageContainer>
 
-            <StyledLinkContainer>
-                <StyledLink onClick={getNext}>
-                    <img
-                        src="src/assets/img/right-arrow.png"
-                        title="next"/>
-                </StyledLink>
-            </StyledLinkContainer>
+            <NextButton onClickAction={getNext} />
 
         </StyledLightBoxContainer>
     )

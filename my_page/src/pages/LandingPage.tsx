@@ -17,7 +17,6 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
     const artSectionRef = useRef(null);
 
     useEffect(() => {
-        console.log('navbar clicked ' + navbarClickedButton);
         if(navbarClickedButton == 'design' && uxuiSectionRef){
             uxuiSectionRef.current?.scrollIntoView({ block: 'start',  behavior: 'smooth' });
         } else if (navbarClickedButton == 'art' && artSectionRef) {
@@ -35,7 +34,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                 title = "UX/UI Design"
             >
                 <DefaultParagraph>
-                    I’m a UX & UI Designer with experience as a frontend and backend developer.
+                    I do UX & UI design with experience as a frontend and backend developer.
                 </DefaultParagraph>
 
                 <DefaultCard
@@ -67,7 +66,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
             >
                 <DefaultParagraph>
                 <>
-                    I exhibited for the first time as part of <TextLink topic={'art'} linkTo={'test'}>Kunst aus vielen Händen</TextLink> . I find the exchange with other artists and people interested in art very exciting, so I am already looking forward to the next opportunity to exhibit.
+                    I exhibited for the first time as part of <TextLink topic={'art'} linkTo={'https://www.kunst-aus-vielen-haenden.de/'}>Kunst aus vielen Händen</TextLink> . I find the exchange with other artists and people interested in art very exciting, so I am already looking forward to the next opportunity to exhibit.
                 </>
                 </DefaultParagraph>
             </DefaultSection>
@@ -79,7 +78,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
             >
                 <>
                     <DefaultParagraph>
-                        I’m Julia. I love to travel, to climb and to collect many impressions. These are my basis for new ideas.
+                        I’m Julia. I love to travel, to climb and to collect many impressions. These are my basis for new ideas. I always carry around at least a pen and paper, but if space allows, I take my colors with me.
                     </DefaultParagraph>
                     <DefaultParagraph>
                         I’m a self-taught designer and artist. I studied computer science of media at the technical university of Dresden and therefore have a software development background.

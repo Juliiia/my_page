@@ -7,9 +7,9 @@ const StyledLink = styled.a`
     color: ${constants.defaultTextColor};
     background-color: ${(props: { topic: string; }) => {
         if(props.topic == 'design') {
-            return constants.colorDesign1;
+            return constants.colorDesign0;
         } else if(props.topic == 'art') {
-            return constants.colorArt1;
+            return constants.colorArt0;
         } else {
             return 'black';
         }
@@ -18,9 +18,9 @@ const StyledLink = styled.a`
         color: ${constants.defaultTextColor};
         background-color: ${(props: { topic: string; }) => {
             if(props.topic == 'design') {
-                return constants.colorDesign2;
+                return constants.colorDesign1;
             } else if(props.topic == 'art') {
-                return constants.colorArt2;
+                return constants.colorArt1;
             } else {
                 return 'black';
             }
@@ -37,7 +37,7 @@ type LinkProps = {
 
 const TextLink = ({topic, linkTo, children}:LinkProps) => {
     return (
-        <StyledLink topic={topic}>
+        <StyledLink topic={topic} href={linkTo} target="_blank">
             {children}
         </StyledLink>
     )

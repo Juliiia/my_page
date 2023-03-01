@@ -1,17 +1,26 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import ImageLightBox from "./imageLightBox";
+import ImageLightBox from "./imageLightBox/imageLightBox";
+import constants from "../assets/js/constants";
 
 const StyledGalleryContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 5px;
+    row-gap: 5px;
     margin: 30px auto;
+    @media (max-width: ${constants.mobileScreenSize}) {
+        grid-template-columns: 1fr 1fr;
+    }
 `;
 
 const StyledImageContainer = styled.div`
     cursor: pointer;
+    border: 5px solid ${constants.defaultBackgroundColor};
+    &:hover {
+        border: 5px solid ${constants.colorArt2};
+        background-color: ${constants.colorArt2};
+    }
 `;
 
 const StyledImg = styled.img`    

@@ -37,20 +37,20 @@ const StyledNavbarLink = styled.a`
 `;
 
 const StyledNavbarLinkDesign = styled(StyledNavbarLink)`
-    background-color: ${constants.colorDesign1};
+    background-color: ${constants.colorDesign0};
     font-size: ${constants.fontSizeText};
     :hover {
         color: ${constants.defaultTextColor};
-        background-color: ${constants.colorDesign2};
+        background-color: ${constants.colorDesign1};
     }
 `;
 
 const StyledNavbarLinkArt = styled(StyledNavbarLink)`
-    background-color: ${constants.colorArt1};
+    background-color: ${constants.colorArt0};
     font-size: ${constants.fontSizeText};
     :hover {
         color: ${constants.defaultTextColor};
-        background-color: ${constants.colorArt2};
+        background-color: ${constants.colorArt1};
     }
 `;
 

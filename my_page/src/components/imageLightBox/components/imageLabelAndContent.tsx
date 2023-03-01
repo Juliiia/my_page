@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
-import {Images} from "./defaultGallery";
-import constants from "../assets/js/constants";
-import DefaultSection from "./defaultSection";
+import {Images} from "../../defaultGallery";
+import constants from "../../../assets/js/constants";
+import DefaultSection from "../../defaultSection";
 
 const StyledImageLabel = styled.div`
     margin-top: 10px;
@@ -17,6 +17,7 @@ const StyledLabel = styled.div`
 `;
 
 const StyledLink = styled.a`    
+    border-radius: 5px;
     background-color: ${constants.colorArt1};
     :hover {
         background-color: ${constants.colorArt2};
