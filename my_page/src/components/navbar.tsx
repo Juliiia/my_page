@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import React from 'react';
 import constants from '../assets/js/constants.js';
 import { useNavigate } from "react-router-dom";
-import { useNavbarHook } from "../context/NavbarHook";
-import {Images} from "./defaultGallery";
 
 const StyledNavbarDiv = styled.div`
 	height: 50px;
@@ -33,6 +31,7 @@ const StyledNavbarLogo = styled.img`
 
 const StyledNavbarLink = styled.a`
     padding: 5px;
+    border-radius: 5px;
     color: ${constants.defaultTextColor};
 `;
 

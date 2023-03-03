@@ -20,6 +20,7 @@ const StyledSocialLink = styled.a`
 `;
 
 const StyledSocialImg = styled.img`
+    height: 35px;
     max-width: inherit;
     padding: 5px;
 `;
@@ -30,7 +31,7 @@ const Footer = () => {
             <div></div>
             <StyledSocialLinkContainer>
                 <StyledSocialLink href="mailto:info@juliamucha.de?subject=Mail from juliamucha.de">
-                    <StyledSocialImg src="src/assets/img/mail.png" alt="Mail" />
+                    <StyledSocialImg src="src/assets/img/envelope.svg" alt="Mail" />
                 </StyledSocialLink>
                 <StyledSocialLink href="https://www.instagram.com/julia_farbe/" target="_blank">
                     <StyledSocialImg src="src/assets/img/instagram.png" alt="Instagram" />

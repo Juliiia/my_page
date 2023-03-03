@@ -17,18 +17,24 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
     const artSectionRef = useRef(null);
 
     useEffect(() => {
-        if(navbarClickedButton == 'design' && uxuiSectionRef){
+        console.log(navbarClickedButton);
+        scrollToSection(navbarClickedButton);
+    }, [navbarClickedButton]);
+
+    const scrollToSection = (sectionName:string) => {
+        console.log('Scroll to ' + sectionName);
+        if(sectionName == 'design' && uxuiSectionRef){
             uxuiSectionRef.current?.scrollIntoView({ block: 'start',  behavior: 'smooth' });
         } else if (navbarClickedButton == 'art' && artSectionRef) {
             artSectionRef.current?.scrollIntoView({ block: 'start',  behavior: 'smooth' });
         }
-    }, [navbarClickedButton]);
+    }
 
     return (
         <>
-            <TopSection />
+            <TopSection onScrollTo={scrollToSection}/>
 
-            <span ref = {uxuiSectionRef} />
+            <span ref = {uxuiSectionRef} id='design_section'/>
             <DefaultSection
                 topic = "design"
                 title = "UX/UI Design"
@@ -47,7 +53,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                 />
             </DefaultSection>
 
-            <span ref = {artSectionRef} />
+            <span ref = {artSectionRef} id='art_section'/>
             <DefaultSection
                 topic = "art"
                 title = "Fine Art - Shaps and colors"
@@ -66,7 +72,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
             >
                 <DefaultParagraph>
                 <>
-                    I exhibited for the first time as part of <TextLink topic={'art'} linkTo={'https://www.kunst-aus-vielen-haenden.de/'}>Kunst aus vielen Händen</TextLink> . I find the exchange with other artists and people interested in art very exciting, so I am already looking forward to the next opportunity to exhibit.
+                    I exhibited for the first time as part of <TextLink topic={'art'} linkTo={'https://www.kunst-aus-vielen-haenden.de/'} newTab={true}>Kunst aus vielen Händen</TextLink> . I find the exchange with other artists and people interested in art very exciting, so I am already looking forward to the next opportunity to exhibit.
                 </>
                 </DefaultParagraph>
             </DefaultSection>
@@ -85,11 +91,6 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                     </DefaultParagraph>
                     <DefaultParagraph>
                        I love to implement new ideas analog or digital and to accompany existing projects creatively and energetically.
-                    </DefaultParagraph>
-                    <DefaultParagraph textSize={'big'}>
-                        <>
-                            If you are interested in my <TextLink topic={'art'} linkTo={'test'}>art</TextLink> or if I can help you with <TextLink topic={'design'} linkTo={'test'}>UX/UI topics</TextLink>, write me at: <TextLink topic={'design'} linkTo={'test'}>mail@juliamucha.de</TextLink>
-                        </>
                     </DefaultParagraph>
                 </>
             </DefaultSection>

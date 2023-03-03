@@ -29,7 +29,11 @@ const StyledImg = styled.img`
     display: block;
 `;
 
-const TopSection = () => {
+type TopSectionProps = {
+    onScrollTo: (c:string) => void;
+}
+
+const TopSection = ({onScrollTo}:TopSectionProps) => {
     return (
         <StyledTopSectionDiv>
             <StyledImg src='src/assets/img/Blatt.png' alt='colorful leaf' />
@@ -39,7 +43,7 @@ const TopSection = () => {
                 </DefaultParagraph>
                 <DefaultParagraph textSize={'big'}>
                     <>
-                        I do <TextLink topic={'design'} linkTo={'test'}>UX & UI design</TextLink> with a developer background and I'm a passionate <TextLink topic={'art'} linkTo={'test'}>artist</TextLink>.
+                        I do <TextLink topic={'design'} linkTo={'#design_section'} newTab={false}>UX & UI design</TextLink> with a developer background and I'm a passionate <TextLink topic={'art'} linkTo={'#art_section'} newTab={false}>artist</TextLink>.
                     </>
                 </DefaultParagraph>
             </StyledTopSectionTextDiv>

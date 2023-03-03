@@ -32,7 +32,7 @@ export const NextIcon = () => {
 }
 
 export const CloseIcon = () => {
-    return <StyledLinkImg src="src/assets/img/cross.svg" title="close"/>
+    return <StyledLinkImg src="src/assets/img/close.png" title="close"/>
 }
 
 type ButtonProps = {

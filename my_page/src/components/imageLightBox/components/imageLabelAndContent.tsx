@@ -51,11 +51,11 @@ const ImageLabelAndContent = ({selectedImg}:ImageLabelAndContentProps) => {
     return (
         <StyledImageLabel>
             <StyledLabel>
-                {(selectedImg.imageInfo && selectedImg.imageInfo.length > 0) &&
+                {/**(selectedImg.imageInfo && selectedImg.imageInfo.length > 0) &&
                     <StyledLink onClick={() => toggleShowMore()}>
                         <StyledIcon src="src/assets/img/right-arrow.png" title="show more" show={showMore}/>
                     </StyledLink>
-                }
+                **/}
                 <StyledImageTitle>
                     {selectedImg.title}
                 </StyledImageTitle>
@@ -63,7 +63,7 @@ const ImageLabelAndContent = ({selectedImg}:ImageLabelAndContentProps) => {
                     {selectedImg.size}
                 </StyledSize>
             </StyledLabel>
-            {(showMore && selectedImg.imageInfo && selectedImg.imageInfo.length > 0) &&
+            {/**(showMore && selectedImg.imageInfo && selectedImg.imageInfo.length > 0) &&
                 <div>
                     {selectedImg.imageInfo.map((value, index) => (
                         <DefaultSection
@@ -74,7 +74,7 @@ const ImageLabelAndContent = ({selectedImg}:ImageLabelAndContentProps) => {
                         </DefaultSection>
                     ))}
                 </div>
-            }
+            **/}
         </StyledImageLabel>
     )
 }

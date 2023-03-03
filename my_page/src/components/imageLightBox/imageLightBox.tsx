@@ -105,12 +105,6 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
             onClick={(event: MouseEvent) => onBackgroundClick(event)}
         >
 
-            <ButtonsBar
-                onPrevious={getPrevious}
-                onClose={onCloseLightBox}
-                onNext={getNext}
-            />
-
             <PreviousButton onClickAction={getPrevious} />
 
             <StyledImageContainer
@@ -126,6 +120,12 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
             </StyledImageContainer>
 
             <NextButton onClickAction={getNext} />
+
+            <ButtonsBar
+                onPrevious={getPrevious}
+                onClose={onCloseLightBox}
+                onNext={getNext}
+            />
 
         </StyledLightBoxContainer>
     )

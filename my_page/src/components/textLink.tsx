@@ -29,18 +29,53 @@ const StyledLink = styled.a`
   }
 `;
 
-type LinkProps = {
+type ScrollToProps = {
     topic: 'design' | 'art';
-    linkTo: string;
+    scrollTo: (c: string) => void;
     children: string | JSX.Element | JSX.Element[];
 }
 
-const TextLink = ({topic, linkTo, children}:LinkProps) => {
+type LinkToProps = {
+    topic: 'design' | 'art';
+    linkTo: string;
+    newTab: boolean;
+    children: string | JSX.Element | JSX.Element[];
+}
+
+type GeneralTypes = ScrollToProps | LinkToProps;
+
+const isLinkToComponent = (props: GeneralTypes): props is LinkToProps => {
+    return 'linkTo' in props;
+}
+
+const isScrollToProps = (props: GeneralTypes): props is ScrollToProps => {
+    return 'scrollTo' in props;
+}
+
+const ScrollToComponent = (props:ScrollToProps) => {
     return (
-        <StyledLink topic={topic} href={linkTo} target="_blank">
-            {children}
+        <StyledLink topic={props.topic} onClick={props.scrollTo('test')}>
+            {props.children}
         </StyledLink>
     )
+}
+
+const LinkToComponent = (props:LinkToProps) => {
+    if(props.newTab) {
+        return <StyledLink topic={props.topic} href={props.linkTo} target="_blank"> {props.children} </StyledLink>
+    } else {
+        return <StyledLink topic={props.topic} href={props.linkTo}> {props.children} </StyledLink>
+    }
+}
+
+const TextLink = (props: GeneralTypes) => {
+    if(isLinkToComponent(props)){
+        return <LinkToComponent {...props} children={props.children} />;
+    } else if(isScrollToProps(props)) {
+        return <ScrollToComponent {...props}  children={props.children} />;
+    } else {
+        return <span></span>;
+    }
 };
 
 export default TextLink;

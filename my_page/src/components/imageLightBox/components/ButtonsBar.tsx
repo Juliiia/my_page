@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import constants from "../../../assets/js/constants";
-import {CloseButton, CloseIcon, NextButton, NextIcon, PreviousButton, PreviousIcon} from "./Buttons";
+import {CloseIcon, NextIcon, PreviousIcon} from "./Buttons";
 
 const StyledLinkContainer = styled.div`
     display: none;
@@ -11,13 +11,15 @@ const StyledLinkContainer = styled.div`
         grid-template-columns: 2fr 1fr  2fr;
         grid-column-gap: 10px;
         height: 50px;
-        border-radius: 5px;
     }
 `;
 
 const StyledLink = styled.a` 
     height: inherit;
     background-color: ${constants.colorArt1};
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
     :hover {
         background-color: ${constants.colorArt2};
     }
@@ -36,9 +38,9 @@ export const ButtonsBar = ({onPrevious, onClose, onNext}:ButtonsBarProps) => {
                 <PreviousIcon />
             </StyledLink>
 
-            <a onClick={onClose} >
+            <StyledLink onClick={onClose} >
                 <CloseIcon />
-            </a>
+            </StyledLink>
 
             <StyledLink onClick={onNext}>
                 <NextIcon />

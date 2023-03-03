@@ -4,7 +4,6 @@ import Navbar from "./components/navbar";
 import {RouteObject} from "react-router";
 import LandingPage from "./pages/LandingPage";
 import CSClimbingPage from "./pages/CSClimbingPage";
-import {NavbarContext} from "./context/NavbarContext";
 
 function App() {
     const [navbarButtonClicked, setNavbarButtonClicked] = useState('');
