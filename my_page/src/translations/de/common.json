@@ -1,0 +1,29 @@
+{
+  "topSection": {
+    "me": "Ich bin Julia. Schön, dass du da bist.",
+    "IDo": "Ich kann <link1>UX & UI design</link1> mit einem Hintergrund als Entwicklering und ich bin passionierte <link2>Gestalterin</link2>."
+  },
+  "uxui": {
+    "section": {
+      "title": "UX & UI Design",
+      "content": "Ich mache UX- und UI-Design, damit Anwendungen nutzbarer werden und freundlicher aussehen. Zusätzlich habe ich Hintergrundwissen aus der Softwareentwicklung, was die Planung und Umsetzung von neuen Interaktionskonzepten und Oberflächen vereinfacht."
+    }
+  },
+  "fineArt": {
+    "section": {
+      "title": "Kunst - Formen und Farben",
+      "content": "Meine Kunst konzentriert sich auf Farben und Formen, die hauptsächlich mit Acryl und Wasserfarben erstellt werden. Ich reise viel und male in der Natur, daher verwende ich auch gerne Materialien aus meiner Umgebung, wie Sand und Blätter."
+    },
+    "exhibitions": {
+      "title": "Ausstellungen",
+      "content": "Ich habe zum ersten Mal im Rahmen von <link1>Kunst aus vielen Händen</link1> ausgestellt. Den Austausch mit anderen Künstlern und Kunstinteressierten finde ich sehr spannend, daher freue ich mich schon jetzt auf die nächste Ausstellungsmöglichkeit.",
+      "KaterMurr": "Die nächste Ausstellung wird am <strong>21.03.2023 im <link1>Kater Murr</link1> in Nürnberg</strong> beginnen zu den Öffnungszeiten der Bar. Anschließend bleiben die Bilder noch ein paar Wochen hängen. Ich freue mich sehr über deinen Besuch."
+    }
+  },
+  "digital": {
+    "section": {
+      "title": "Digitale Kunst, Illustrationen & Monster",
+      "content": "Im Feld der digitalen Gestaltung entwickel ich Schritten, Logos und Illustrationen. Dabei arbeite ich vorzugsweise mit Sketchbook und Procreate. Unter den Illustrationen haben es mir die Monster besonders angetan und dadurch ist im Laufe der Zeit eine kleine Sammlung entstanden: 'Monster für jede Situation'."
+    }
+  }
+}

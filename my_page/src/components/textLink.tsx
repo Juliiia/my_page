@@ -39,7 +39,7 @@ type LinkToProps = {
     topic: 'design' | 'art';
     linkTo: string;
     newTab: boolean;
-    children: string | JSX.Element | JSX.Element[];
+    children?: string | JSX.Element | JSX.Element[];
 }
 
 type GeneralTypes = ScrollToProps | LinkToProps;

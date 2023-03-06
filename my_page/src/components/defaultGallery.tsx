@@ -35,7 +35,7 @@ export interface ImageInfo {
 
 export interface Images {
     title: string
-    content: string
+    content?: string
     src: string
     size: string
     isSold: boolean
@@ -43,6 +43,7 @@ export interface Images {
 }
 
 type GalleryProps = {
+    topic: 'design' | 'art' | 'digital' | 'other';
     imageCollection: Images[];
 }
 

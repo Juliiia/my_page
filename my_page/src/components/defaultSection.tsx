@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import constants from '../assets/js/constants.js'
+import {DefaultTFuncReturn} from "i18next";
 
 const StyledSMainSectionDiv = styled.div`
     padding: 10px;
@@ -17,6 +18,8 @@ const StyledTitle = styled.h1`
             return constants.colorDesign2;
         } else if(props.topic == 'art') {
             return constants.colorArt2;
+        } else if(props.topic == 'digital') {
+            return constants.colorDigital2;
         } else if(props.topic == 'other') {
             return constants.colorMe1;
         } else {
@@ -27,9 +30,9 @@ const StyledTitle = styled.h1`
 `;
 
 type SectionProps = {
-    topic: 'design' | 'art' | 'other';
+    topic: 'design' | 'art' | 'digital' | 'other';
     level?: number;
-    title: string;
+    title: string | DefaultTFuncReturn | JSX.Element | JSX.Element[];
     content?: string;
     children?: string | JSX.Element | JSX.Element[];
 };

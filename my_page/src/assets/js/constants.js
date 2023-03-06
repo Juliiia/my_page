@@ -32,6 +32,11 @@ export default {
     colorOrange2: '#ffb84d',
     colorOrange3: '#aa7e16',
 
+    colorDigital0: '#cdffb1',
+    colorDigital1: '#b2f090',
+    colorDigital2: '#8fc174',
+    colorDigital3: '#6f995a',
+
     colorMe1: '#b2a1a6',
 
     colorGrey1: '#faf5f6',

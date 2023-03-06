@@ -3,6 +3,7 @@ import React from 'react';
 import constants from '../assets/js/constants.js'
 import TextLink from "../components/textLink";
 import DefaultParagraph from "../components/defaultParagraph";
+import {Trans, useTranslation} from "react-i18next";
 
 const StyledTopSectionDiv = styled.div`
     margin: auto;
@@ -34,16 +35,25 @@ type TopSectionProps = {
 }
 
 const TopSection = ({onScrollTo}:TopSectionProps) => {
+    const {t, i18n} = useTranslation('common');
+
     return (
         <StyledTopSectionDiv>
             <StyledImg src='src/assets/img/Blatt.png' alt='colorful leaf' />
             <StyledTopSectionTextDiv>
                 <DefaultParagraph textSize={'big'}>
-                    I'm Julia, nice to have you here.
+                    {t('topSection.me')}
                 </DefaultParagraph>
                 <DefaultParagraph textSize={'big'}>
                     <>
-                        I do <TextLink topic={'design'} linkTo={'#design_section'} newTab={false}>UX & UI design</TextLink> with a developer background and I'm a passionate <TextLink topic={'art'} linkTo={'#art_section'} newTab={false}>artist</TextLink>.
+                        <Trans
+                            t={t}
+                            i18nKey="topSection.IDo"
+                            components={{
+                                link1: <TextLink topic={'design'} linkTo={'#design_section'} newTab={false} />,
+                                link2: <TextLink topic={'art'} linkTo={'#art_section'} newTab={false} />
+                            }}
+                        />
                     </>
                 </DefaultParagraph>
             </StyledTopSectionTextDiv>

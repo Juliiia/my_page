@@ -1,0 +1,29 @@
+{
+  "topSection": {
+    "me": "I'm Julia, nice to have you here.",
+    "IDo": "I do <link1>UX & UI design</link1> with a developer background and I'm a passionate <link2>artist</link2>."
+  },
+  "uxui": {
+    "section": {
+      "title": "UX & UI Design",
+      "content": "I do UX and UI design to make applications more usable and look friendlier. In addition, I have background knowledge of software development, which simplifies the planning and implementation of new interaction concepts and interfaces."
+    }
+  },
+  "fineArt": {
+    "section": {
+      "title": "Fine Art - Shapes and colors",
+      "content": "My art focuses on colors and shapes mostly created with acrylics and watercolors. I travel a lot and paint in nature, so I also like to use materials from the environment, such as sand and leaves."
+    },
+    "exhibitions": {
+      "title": "Exhibitions",
+      "content": "I exhibited for the first time as part of <link1>Kunst aus vielen Händen</link1>. I find the exchange with other artists and people interested in art very exciting, so I am already looking forward to the next opportunity to exhibit.",
+      "KaterMurr": "The next exhibition will begin on <strong>March 21, 2023 at <link1>Kater Murr</link1> in Nuremberg</strong> during the opening hours of the bar. The pictures will then remain hanging for a few weeks. I am very happy about your visit."
+    }
+  },
+  "digital": {
+    "section": {
+      "title": "Digital Art, Illustrations & Monster",
+      "content": "In the field of digital design, I develop fonts, logos and illustrations. I prefer to work with Sketchbook and Procreate. Among the illustrations, I particularly liked the monsters, which has resulted in a small collection over time: 'Monsters for every situation'."
+    }
+  }
+}

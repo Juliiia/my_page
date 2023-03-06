@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import constants from '../assets/js/constants.js'
+import {DefaultTFuncReturn} from "i18next";
 
 const StyledParagraph = styled.div`
     font-size: ${(props: {textSize:string}) => {
@@ -12,13 +13,12 @@ const StyledParagraph = styled.div`
             return constants.fontSizeText;
         }
     }};
-    line-height: initial;
     margin: 10px 0px;
 `;
 
 type DefaultParagraphProps = {
     textSize?: 'big' | 'normal' | 'small';
-    children: string | JSX.Element | JSX.Element[];
+    children?: string | DefaultTFuncReturn | JSX.Element | JSX.Element[];
 };
 
 const DefaultParagraph = ({children, textSize='normal'}:DefaultParagraphProps) => {

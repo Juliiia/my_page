@@ -1,8 +1,9 @@
 // @ts-ignore
 import styled from 'styled-components';
-import React from 'react';
+import React, {useState} from 'react';
 import constants from '../assets/js/constants.js';
 import { useNavigate } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const StyledNavbarDiv = styled.div`
 	height: 50px;
@@ -53,12 +54,30 @@ const StyledNavbarLinkArt = styled(StyledNavbarLink)`
     }
 `;
 
+const StyledNavbarLinkDigitalArt = styled(StyledNavbarLink)`
+    background-color: ${constants.colorDigital0};
+    font-size: ${constants.fontSizeText};
+    :hover {
+        color: ${constants.defaultTextColor};
+        background-color: ${constants.colorDigital1};
+    }
+`;
+
 type NavbarProps = {
     onButtonClicked:(c: string) => void;
 }
 
 const Navbar = ({onButtonClicked}:NavbarProps) => {
+    const [t, i18n] = useTranslation('common');
     const navigate = useNavigate();
+    const [selectedLanguage, setSelectedLanguage] = useState('en');
+
+    const switchLanguage = () => {
+        let newLanguage = 'en';
+        if (selectedLanguage == 'en') newLanguage = 'de';
+        setSelectedLanguage(newLanguage);
+        i18n.changeLanguage(newLanguage);
+    }
 
     return (
         <StyledNavbarDiv>
@@ -69,6 +88,7 @@ const Navbar = ({onButtonClicked}:NavbarProps) => {
                     navigate('/');
                 }}
             />
+
             <StyledNavbarItem>
                 <StyledNavbarLinkDesign
                     onClick={() => {
@@ -78,6 +98,7 @@ const Navbar = ({onButtonClicked}:NavbarProps) => {
                     UX UI Design
                 </StyledNavbarLinkDesign>
             </StyledNavbarItem>
+
             <StyledNavbarItem>
                 <StyledNavbarLinkArt
                     onClick={() => {
@@ -86,6 +107,26 @@ const Navbar = ({onButtonClicked}:NavbarProps) => {
                 >
                     Fine Art
                 </StyledNavbarLinkArt>
+            </StyledNavbarItem>
+
+            <StyledNavbarItem>
+                <StyledNavbarLinkDigitalArt
+                    onClick={() => {
+                        onButtonClicked('digital');
+                    }}
+                >
+                    Digital Art
+                </StyledNavbarLinkDigitalArt>
+            </StyledNavbarItem>
+
+            <StyledNavbarItem>
+                <a
+                    onClick={() => {
+                        switchLanguage()
+                    }}
+                >
+                    {selectedLanguage}
+                </a>
             </StyledNavbarItem>
         </StyledNavbarDiv>
     )
