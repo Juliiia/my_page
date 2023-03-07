@@ -18,9 +18,31 @@ const StyledImageContainer = styled.div`
     cursor: pointer;
     border: 5px solid ${constants.defaultBackgroundColor};
     &:hover {
-        border: 5px solid ${constants.colorArt2};
-        background-color: ${constants.colorArt2};
-    }
+        border: 5px solid ${(props: { topic: string}) => {
+            if (props.topic == 'design') {
+                return constants.colorDesign2;
+            } else if(props.topic == 'art') {
+                return constants.colorArt2;
+            } else if(props.topic == 'digital') {
+                return constants.colorDigital2;
+            } else if(props.topic == 'other') {
+                return constants.colorMe1;
+            } else {
+                return 'black';
+            }}};
+        background-color: ${(props: { topic: string}) => {
+            if (props.topic == 'design') {
+                return constants.colorDesign2;
+            } else if(props.topic == 'art') {
+                return constants.colorArt2;
+            } else if(props.topic == 'digital') {
+                return constants.colorDigital2;
+            } else if(props.topic == 'other') {
+                return constants.colorMe1;
+            } else {
+                return 'black';
+            }}};
+        }
 `;
 
 const StyledImg = styled.img`    
@@ -47,7 +69,7 @@ type GalleryProps = {
     imageCollection: Images[];
 }
 
-const DefaultGallery = ({imageCollection}:GalleryProps) => {
+const DefaultGallery = ({topic, imageCollection}:GalleryProps) => {
     const [isLightBoxOpen, setIsLightBoxOpen] = useState(false);
     const [selectedImgIndex, setSelectedImgIndex] = useState(0);
 
@@ -64,7 +86,7 @@ const DefaultGallery = ({imageCollection}:GalleryProps) => {
         <>
             <StyledGalleryContainer>
                 {imageCollection.map((data, key) => {
-                    return <StyledImageContainer key={key} onClick={() => onImageClick(key)}>
+                    return <StyledImageContainer topic={topic} key={key} onClick={() => onImageClick(key)}>
                         <StyledImg src={data.src} alt={data.title} />
                     </StyledImageContainer>;
                 })}

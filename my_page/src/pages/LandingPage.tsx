@@ -102,7 +102,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                 <DefaultParagraph>
                     {t('digital.section.content')}
                 </DefaultParagraph>
-                <DefaultGallery imageCollection={monsterGallery} />
+                <DefaultGallery topic={'digital'} imageCollection={monsterGallery} />
             </DefaultSection>
 
             <DefaultSection

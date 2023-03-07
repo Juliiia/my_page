@@ -10,6 +10,8 @@ const StyledLink = styled.a`
             return constants.colorDesign0;
         } else if(props.topic == 'art') {
             return constants.colorArt0;
+        } else if(props.topic == 'digital') {
+            return constants.colorDigital0;
         } else {
             return 'black';
         }
@@ -21,6 +23,8 @@ const StyledLink = styled.a`
                 return constants.colorDesign1;
             } else if(props.topic == 'art') {
                 return constants.colorArt1;
+            } else if(props.topic == 'digital') {
+                return constants.colorDigital1;
             } else {
                 return 'black';
             }
@@ -36,7 +40,7 @@ type ScrollToProps = {
 }
 
 type LinkToProps = {
-    topic: 'design' | 'art';
+    topic: 'design' | 'art' | 'digital';
     linkTo: string;
     newTab: boolean;
     children?: string | JSX.Element | JSX.Element[];
