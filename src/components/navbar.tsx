@@ -1,7 +1,7 @@
 // @ts-ignore
 import styled from 'styled-components';
 import React, {useState} from 'react';
-import constants from '../assets/js/constants.js';
+import constants from '../js/constants.js';
 import { useNavigate } from "react-router-dom";
 import {useTranslation} from "react-i18next";
 

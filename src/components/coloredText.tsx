@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import constants from '../assets/js/constants.js'
+import constants from '../js/constants.js'
 
 const StyledSpan = styled.span`
     cursor: pointer;

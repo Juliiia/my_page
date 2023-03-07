@@ -5,12 +5,12 @@ export const artGallery = [
         src: "src/assets/img/Gallery/schmetterling.jpg",
         size: "30x40cm",
         isSold: true,
-        imageInfo: [
+        /*imageInfo: [
             {
                 src: null,
                 content: "Zu dem Bild hat mich ein Foto inspieriert, welches ich auf dem Heimweg von der Uni aufgenommen hatte. Ein wunderschöner Admiral Schmetterling saß auf einem, vermutlich noch warmen, Autoreifen. Ich hoffe dass er noch rechzeitig weggefolgen ist.",
             },
-        ],
+        ],*/
     },
     {
         title: "Eisblumen",

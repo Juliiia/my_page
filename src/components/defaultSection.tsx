@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import constants from '../assets/js/constants.js'
+import constants from '../js/constants.js'
 import {DefaultTFuncReturn} from "i18next";
 
 const StyledSMainSectionDiv = styled.div`

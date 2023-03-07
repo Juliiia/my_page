@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import DefaultSection from "../components/defaultSection";
 import DefaultParagraph from "../components/defaultParagraph";
 

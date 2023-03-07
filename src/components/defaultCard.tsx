@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import constants from '../assets/js/constants.js';
+import constants from '../js/constants.js';
 import { useNavigate } from "react-router-dom";
 
 const StyledCardDiv = styled.a`

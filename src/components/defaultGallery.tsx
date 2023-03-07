@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import ImageLightBox from "./imageLightBox/imageLightBox";
-import constants from "../assets/js/constants";
+import constants from "../js/constants";
 
 const StyledGalleryContainer = styled.div`
     display: grid;
@@ -61,7 +61,7 @@ export interface Images {
     src: string
     size: string
     isSold: boolean
-    imageInfo: ImageInfo[]
+    imageInfo?: ImageInfo[]
 }
 
 type GalleryProps = {

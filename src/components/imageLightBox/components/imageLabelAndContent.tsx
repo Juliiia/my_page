@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {Images} from "../../defaultGallery";
-import constants from "../../../assets/js/constants";
+import constants from "../../../js/constants";
 import DefaultSection from "../../defaultSection";
 
 const StyledImageLabel = styled.div`

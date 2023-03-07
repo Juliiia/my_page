@@ -2,8 +2,8 @@ import React, {useEffect, useRef} from 'react';
 import DefaultSection from "../components/defaultSection";
 import DefaultCard from "../components/defaultCard";
 import DefaultGallery from "../components/defaultGallery";
-import {artGallery} from "../assets/js/artGallery";
-import {monsterGallery} from "../assets/js/monsterGallery";
+import {artGallery} from "../js/artGallery";
+import {monsterGallery} from "../js/monsterGallery";
 import TopSection from "./TopSection";
 import Footer from "./Footer";
 import TextLink from "../components/textLink";
@@ -11,17 +11,19 @@ import DefaultParagraph from "../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";
 
 type LandingPageProps = {
-    navbarClickedButton: string;
+    navbarClickedButton?: string;
 }
 
 const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
     const {t, i18n} = useTranslation('common');
-    const uxuiSectionRef = useRef(null);
-    const artSectionRef = useRef(null);
-    const digitalSectionRef = useRef(null);
+    const uxuiSectionRef = useRef<HTMLInputElement>(null);
+    const artSectionRef = useRef<HTMLInputElement>(null);
+    const digitalSectionRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
-        scrollToSection(navbarClickedButton);
+        if(navbarClickedButton){
+            scrollToSection(navbarClickedButton);
+        }
     }, [navbarClickedButton]);
 
     const scrollToSection = (sectionName:string) => {

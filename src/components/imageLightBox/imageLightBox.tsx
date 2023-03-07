@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styled from 'styled-components';
 import {Images} from "../defaultGallery";
-import constants from '../../assets/js/constants.js'
+import constants from '../../js/constants.js'
 import ImageLabelAndContent from "./components/imageLabelAndContent";
 import {NextButton, PreviousButton} from "./components/Buttons";
 import {ButtonsBar} from "./components/ButtonsBar";
@@ -63,8 +63,8 @@ type LightBoxProps = {
 
 const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}:LightBoxProps) => {
     const [selectedImg, setSelectedImg] = useState(imageCollection[selectedIndex]);
-    const imageContainer = useRef(null);
-    const imageFrameRef = useRef(null);
+    const imageContainer = useRef<HTMLInputElement>(null);
+    const imageFrameRef = useRef<HTMLInputElement>(null);
 
    useEffect(() => {
         setSelectedImg(imageCollection[selectedIndex]);
@@ -76,13 +76,13 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
         }
     }, [isOpen]);
 
-    const onBackgroundClick = (event: MouseEvent) => {
+    const onBackgroundClick = ({target}: MouseEvent) => {
         // improve: https://usehooks-ts.com/react-hook/use-on-click-outside
         const currentImageContainer = imageContainer?.current;
         const currentImageFrame = imageFrameRef?.current;
 
         // Do nothing if clicking ref's element or descendent elements
-        if (currentImageContainer && currentImageFrame && currentImageContainer.contains(event.target) && !currentImageFrame.contains(event.target)) {
+        if (currentImageContainer && currentImageFrame && currentImageContainer?.contains(target as Node) && !currentImageFrame.contains(target as Node)) {
             onCloseLightBox();
         }
     }
@@ -102,7 +102,7 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
     return (
         <StyledLightBoxContainer
             isVisible={isOpen}
-            onClick={(event: MouseEvent) => onBackgroundClick(event)}
+            onClick={() => onBackgroundClick}
         >
 
             <PreviousButton onClickAction={getPrevious} />

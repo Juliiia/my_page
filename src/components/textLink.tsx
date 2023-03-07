@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import constants from '../assets/js/constants.js'
+import constants from '../js/constants.js'
 
 const StyledLink = styled.a`
     cursor: pointer;
@@ -58,7 +58,10 @@ const isScrollToProps = (props: GeneralTypes): props is ScrollToProps => {
 
 const ScrollToComponent = (props:ScrollToProps) => {
     return (
-        <StyledLink topic={props.topic} onClick={props.scrollTo('test')}>
+        <StyledLink
+            topic={props.topic}
+            onClick={() => props.scrollTo('test')}
+        >
             {props.children}
         </StyledLink>
     )

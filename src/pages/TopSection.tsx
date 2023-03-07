@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import constants from '../assets/js/constants.js'
+import constants from '../js/constants.js'
 import TextLink from "../components/textLink";
 import DefaultParagraph from "../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import constants from "../../../assets/js/constants";
+import constants from "../../../js/constants";
 
 const StyledLink = styled.a`    
     width: 100%;
