@@ -6,13 +6,13 @@
   "uxui": {
     "section": {
       "title": "UX & UI Design",
-      "content": "Ich mache UX- und UI-Design, damit Anwendungen nutzbarer werden und freundlicher aussehen. Zusätzlich habe ich Hintergrundwissen aus der Softwareentwicklung, was die Planung und Umsetzung von neuen Interaktionskonzepten und Oberflächen vereinfacht."
+      "content": "Ich tüftel gerne am UX- und UI-Design, damit Anwendungen nutzbarer werden und freundlicher aussehen. Zusätzlich habe ich Hintergrundwissen aus der Softwareentwicklung, was die Planung und Umsetzung von neuen Interaktionskonzepten und Oberflächen vereinfacht."
     }
   },
   "fineArt": {
     "section": {
       "title": "Kunst - Formen und Farben",
-      "content": "Meine Kunst konzentriert sich auf Farben und Formen, die hauptsächlich mit Acryl und Wasserfarben erstellt werden. Ich reise viel und male in der Natur, daher verwende ich auch gerne Materialien aus meiner Umgebung, wie Sand und Blätter."
+      "content": "Meine Kunst konzentriert sich auf Farben und Formen, die hauptsächlich mit Acryl und Wasserfarben erstellt werden. Ich reise viel und male in der Natur, daher verwende ich auch gerne Materialien aus meiner Umgebung, wie Sand und Blätter. <link1>@julia_farbe</link1>"
     },
     "exhibitions": {
       "title": "Ausstellungen",
@@ -23,7 +23,15 @@
   "digital": {
     "section": {
       "title": "Digitale Kunst, Illustrationen & Monster",
-      "content": "Im Feld der digitalen Gestaltung entwickel ich Schritten, Logos und Illustrationen. Dabei arbeite ich vorzugsweise mit Sketchbook und Procreate. Unter den Illustrationen haben es mir die Monster besonders angetan und dadurch ist im Laufe der Zeit eine kleine Sammlung entstanden: 'Monster für jede Situation'."
+      "content": "Im Feld der digitalen Gestaltung entwickel ich Schritten, Logos und Illustrationen. Dabei arbeite ich vorzugsweise mit Sketchbook und Procreate. Unter den Illustrationen haben es mir die Monster besonders angetan und dadurch ist im Laufe der Zeit eine kleine Sammlung entstanden: 'Monster für jede Situation'. <link1>@monster.star.moon</link1>"
+    }
+  },
+  "aboutMe": {
+    "section": {
+      "title": "Über",
+      "personal": "Ich bin Julia. Ich liebe es zu malen und zu gestalten analog, wie auch digital. Ebenfalls Reise und Klettere ich leidernschaftlich gerne. Unterwegs habe ich meistens Stifte und Notizbuch immer dabei. Wenn der Platz es zulässt, werden die Farben mit eingepackt.",
+      "professional": "Ich bin ein autodidaktischer Designer und Künstler. Ich habe Medieninformatik an der Technischen Universität Dresden studiert. Das hatte meinen Gestaltungsraum auf die digitale Welt erweitert und ich habe Wissen in der Softwarentwicklung erlangt.",
+      "claim": "Ich liebe es, neue Ideen analog oder digital umzusetzen und bestehende Projekte kreativ und tatkräftig zu begleiten."
     }
   }
 }

@@ -97,6 +97,7 @@ const DefaultGallery = ({topic, imageCollection}:GalleryProps) => {
                 selectedIndex={selectedImgIndex}
                 isOpen={isLightBoxOpen}
                 onCloseLightBox={closeLightBox}
+                topic={topic}
             />
         </>
     )

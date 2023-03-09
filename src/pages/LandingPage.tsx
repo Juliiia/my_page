@@ -65,7 +65,13 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                 title = {t('fineArt.section.title')}
             >
                 <DefaultParagraph>
-                    {t('fineArt.section.content')}
+                    <Trans
+                        t={t}
+                        i18nKey='fineArt.section.content'
+                        components={{
+                            link1: <TextLink topic={'art'} linkTo={'https://www.instagram.com/julia_farbe/'} newTab={true} />
+                        }}
+                    />
                 </DefaultParagraph>
 
                 <DefaultGallery topic={'art'} imageCollection={artGallery} />
@@ -102,7 +108,13 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                 title={t('digital.section.title')}
             >
                 <DefaultParagraph>
-                    {t('digital.section.content')}
+                    <Trans
+                        t={t}
+                        i18nKey='digital.section.content'
+                        components={{
+                            link1: <TextLink topic={'digital'} linkTo={'https://www.instagram.com/monster.star.moon/'} newTab={true} />
+                        }}
+                    />
                 </DefaultParagraph>
                 <DefaultGallery topic={'digital'} imageCollection={monsterGallery} />
             </DefaultSection>
@@ -113,13 +125,13 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
             >
                 <>
                     <DefaultParagraph>
-                        I’m Julia. I love to travel, to climb and to collect many impressions. These are my basis for new ideas. I always carry around at least a pen and paper, but if space allows, I take my colors with me.
+                        {t('aboutMe.section.personal')}
                     </DefaultParagraph>
                     <DefaultParagraph>
-                        I’m a self-taught designer and artist. I studied computer science of media at the technical university of Dresden and therefore have a software development background.
+                        {t('aboutMe.section.professional')}
                     </DefaultParagraph>
                     <DefaultParagraph>
-                       I love to implement new ideas analog or digital and to accompany existing projects creatively and energetically.
+                       {t('aboutMe.section.claim')}
                     </DefaultParagraph>
                 </>
             </DefaultSection>

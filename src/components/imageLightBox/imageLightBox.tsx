@@ -59,9 +59,10 @@ type LightBoxProps = {
     selectedIndex: number;
     isOpen: boolean;
     onCloseLightBox: ()=>void;
+    topic: 'design' | 'art' | 'digital' | 'other';
 }
 
-const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}:LightBoxProps) => {
+const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox, topic}:LightBoxProps) => {
     const [selectedImg, setSelectedImg] = useState(imageCollection[selectedIndex]);
     const imageContainer = useRef<HTMLInputElement>(null);
     const imageFrameRef = useRef<HTMLInputElement>(null);
@@ -76,7 +77,8 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
         }
     }, [isOpen]);
 
-    const onBackgroundClick = ({target}: MouseEvent) => {
+    const onBackgroundClick = (target: EventTarget) => {
+        console.log("on Backgound");
         // improve: https://usehooks-ts.com/react-hook/use-on-click-outside
         const currentImageContainer = imageContainer?.current;
         const currentImageFrame = imageFrameRef?.current;
@@ -102,10 +104,10 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
     return (
         <StyledLightBoxContainer
             isVisible={isOpen}
-            onClick={() => onBackgroundClick}
+            onClick={(event:React.MouseEvent<HTMLDivElement>) => onBackgroundClick(event.target)}
         >
 
-            <PreviousButton onClickAction={getPrevious} />
+            <PreviousButton onClickAction={getPrevious} topic={topic}/>
 
             <StyledImageContainer
                 ref={imageContainer}
@@ -119,12 +121,13 @@ const ImageLightBox = ({imageCollection, selectedIndex, isOpen, onCloseLightBox}
                 </StyledImageContentFrame>
             </StyledImageContainer>
 
-            <NextButton onClickAction={getNext} />
+            <NextButton onClickAction={getNext} topic={topic}/>
 
             <ButtonsBar
                 onPrevious={getPrevious}
                 onClose={onCloseLightBox}
                 onNext={getNext}
+                topic={topic}
             />
 
         </StyledLightBoxContainer>

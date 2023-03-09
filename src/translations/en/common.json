@@ -12,7 +12,7 @@
   "fineArt": {
     "section": {
       "title": "Fine Art - Shapes and colors",
-      "content": "My art focuses on colors and shapes mostly created with acrylics and watercolors. I travel a lot and paint in nature, so I also like to use materials from the environment, such as sand and leaves."
+      "content": "My art focuses on colors and shapes mostly created with acrylics and watercolors. I travel a lot and paint in nature, so I also like to use materials from the environment, such as sand and leaves. <link1>@julia_farbe</link1>"
     },
     "exhibitions": {
       "title": "Exhibitions",
@@ -23,7 +23,15 @@
   "digital": {
     "section": {
       "title": "Digital Art, Illustrations & Monster",
-      "content": "In the field of digital design, I develop fonts, logos and illustrations. I prefer to work with Sketchbook and Procreate. Among the illustrations, I particularly liked the monsters, which has resulted in a small collection over time: 'Monsters for every situation'."
+      "content": "In the field of digital design, I develop fonts, logos and illustrations. I prefer to work with Sketchbook and Procreate. Among the illustrations, I particularly liked the monsters, which has resulted in a small collection over time: 'Monsters for every situation'. <link1>@monster.star.moon</link1>"
+    }
+  },
+  "aboutMe": {
+    "section": {
+      "title": "About me",
+      "personal": "I am Julia. I love to paint and design analogue as well as digital. Unfortunately, I also like to travel and climb. I always have a pen and notebook with me. If space allows, the colors will be included.",
+      "professional": "I am a self-taught designer and artist. I studied computer science of media at the Technical University of Dresden. That had expanded my design space to the digital world and I gained knowledge in software development.",
+      "claim": "I love to plan and implement new ideas analogously or digitally and to accompany existing projects creatively and energetically."
     }
   }
 }

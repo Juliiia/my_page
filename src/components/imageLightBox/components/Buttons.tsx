@@ -9,9 +9,29 @@ const StyledLink = styled.a`
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    background-color: ${constants.colorArt1};
+    background-color: ${(props: { topic: string; }) => {
+        if(props.topic == 'design') {
+            return constants.colorDesign0;
+        } else if(props.topic == 'art') {
+            return constants.colorArt0;
+        } else if(props.topic == 'digital') {
+            return constants.colorDigital0;
+        } else {
+            return 'black';
+        }
+    }};
     :hover {
-        background-color: ${constants.colorArt2};
+        background-color: ${(props: { topic: string; }) => {
+            if(props.topic == 'design') {
+                return constants.colorDesign1;
+            } else if(props.topic == 'art') {
+                return constants.colorArt1;
+            } else if(props.topic == 'digital') {
+                return constants.colorDigital1;
+            } else {
+                return 'black';
+            }
+        }};
     }
     @media (max-width: ${constants.mobileScreenSize}) {
         display: none;
@@ -37,27 +57,28 @@ export const CloseIcon = () => {
 
 type ButtonProps = {
     onClickAction: ()=>void;
+    topic: 'design' | 'art' | 'digital' | 'other';
 }
 
-export const PreviousButton = ({onClickAction}:ButtonProps) => {
+export const PreviousButton = ({onClickAction, topic}:ButtonProps) => {
     return (
-        <StyledLink onClick={onClickAction}>
+        <StyledLink onClick={onClickAction} topic={topic}>
             <PreviousIcon />
         </StyledLink>
     )
 };
 
-export const NextButton = ({onClickAction}:ButtonProps) => {
+export const NextButton = ({onClickAction, topic}:ButtonProps) => {
     return (
-        <StyledLink onClick={onClickAction}>
+        <StyledLink onClick={onClickAction} topic={topic}>
             <NextIcon />
         </StyledLink>
     )
 };
 
-export const CloseButton = ({onClickAction}:ButtonProps) => {
+export const CloseButton = ({onClickAction, topic}:ButtonProps) => {
     return (
-        <StyledLink onClick={onClickAction}>
+        <StyledLink onClick={onClickAction} topic={topic}>
             <CloseIcon />
         </StyledLink>
     )
