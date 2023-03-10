@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import constants from "../../../js/constants";
+// @ts-ignore
+import leftArrow from '../../../assets/img/left-arrow.png';
+// @ts-ignore
+import rightArrow from '../../../assets/img/right-arrow.png';
+// @ts-ignore
+import close from '../../../assets/img/close.png';
 
 const StyledLink = styled.a`    
     width: 100%;
@@ -44,15 +50,15 @@ const StyledLinkImg = styled.img`
 `;
 
 export const PreviousIcon = () => {
-    return <StyledLinkImg src="src/assets/img/left-arrow.png" title="previous"/>;
+    return <StyledLinkImg src={leftArrow} title="previous"/>;
 }
 
 export const NextIcon = () => {
-    return <StyledLinkImg src="src/assets/img/right-arrow.png" title="next"/>;
+    return <StyledLinkImg src={rightArrow} title="next"/>;
 }
 
 export const CloseIcon = () => {
-    return <StyledLinkImg src="src/assets/img/close.png" title="close"/>
+    return <StyledLinkImg src={close} title="close"/>
 }
 
 type ButtonProps = {

@@ -1,84 +1,90 @@
+import schmetterling from '../assets/img/Gallery/schmetterling.jpg'
+import eisblume from '../assets/img/Gallery/eisblumen.jpg'
+import beobachtering from '../assets/img/Gallery/beobachterin.jpg'
+import blumenschmetterling from '../assets/img/Gallery/blumen-schmetterling.jpg'
+import zeit from '../assets/img/Gallery/Zeit.jpg'
+import start from '../assets/img/Gallery/Start.jpg'
+import guterWein from '../assets/img/Gallery/guter_wein.jpg'
+import herbstZuWinter from '../assets/img/Gallery/herbst-zu-winter.jpg'
+import herbst from '../assets/img/Gallery/herbst.jpg'
+import luna from '../assets/img/Gallery/luna.jpg'
+import ethopia from '../assets/img/Gallery/Etiopia.jpg'
+
 export const artGallery = [
     {
         title: "Kleines Wunder",
         content: "TODO",
-        src: "src/assets/img/Gallery/schmetterling.jpg",
+        src: schmetterling,
         size: "30x40cm",
         isSold: true,
-        /*imageInfo: [
-            {
-                src: null,
-                content: "Zu dem Bild hat mich ein Foto inspieriert, welches ich auf dem Heimweg von der Uni aufgenommen hatte. Ein wunderschöner Admiral Schmetterling saß auf einem, vermutlich noch warmen, Autoreifen. Ich hoffe dass er noch rechzeitig weggefolgen ist.",
-            },
-        ],*/
     },
     {
         title: "Eisblumen",
         content: "todo",
-        src: "src/assets/img/Gallery/eisblumen.jpg",
+        src: eisblume,
         size: "30x40cm",
         isSold: false,
     },
     {
         title: "Blumenschmetterling",
         content: "todo",
-        src: "src/assets/img/Gallery/blumen-schmetterling.jpg",
+        src: blumenschmetterling,
         size: "30x40cm",
         isSold: true,
     },
     {
         title: "Beobachterin",
         content: "todo",
-        src: "src/assets/img/Gallery/beobachterin.jpg",
+        src: beobachtering,
         size: "30x40cm",
         isSold: true,
     },
     {
         title: "Zeit",
         content: "todo",
-        src: "src/assets/img/Gallery/Zeit.jpg",
+        src: zeit,
         size: "30x40cm",
         isSold: true,
     },
     {
         title: "Start",
         content: "todo",
-        src: "src/assets/img/Gallery/Start.jpg",
+        src: start,
         size: "30x40cm",
         isSold: false,
     },
     {
         title: "Guter Wein",
         content: "todo",
-        src: "src/assets/img/Gallery/guter_wein.jpg",
+        src: guterWein,
         size: "30x40cm",
         isSold: false,
     },
     {
         title: "Herbst zu Winter",
         content: "todo",
-        src: "src/assets/img/Gallery/herbst-zu-winter.jpg",
+        src: herbstZuWinter,
         size: "36x47cm",
         isSold: false,
     },
     {
         title: "Herbst",
         content: "todo",
-        src: "src/assets/img/Gallery/herbst.jpg",
+        src: herbst,
         size: "30x40cm",
         isSold: false,
     },
     {
         title: "Luna",
         content: "todo",
-        src: "src/assets/img/Gallery/luna.jpg",
+        src: luna,
         size: "30x40cm",
         isSold: true,
     },
     {
         title: "Etiopia",
         content: "todo",
-        src: "src/assets/img/Gallery/Etiopia.jpg",
+        src: ethopia,
         size: "30x40cm",
         isSold: false,
     },

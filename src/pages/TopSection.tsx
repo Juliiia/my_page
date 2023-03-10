@@ -4,6 +4,8 @@ import constants from '../js/constants.js'
 import TextLink from "../components/textLink";
 import DefaultParagraph from "../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";
+// @ts-ignore
+import blattPng from '../assets/img/Blatt.png'
 
 const StyledTopSectionDiv = styled.div`
     margin: auto;
@@ -39,7 +41,7 @@ const TopSection = ({onScrollTo}:TopSectionProps) => {
 
     return (
         <StyledTopSectionDiv>
-            <StyledImg src='src/assets/img/Blatt.png' alt='colorful leaf' />
+            <StyledImg src={blattPng} alt='colorful leaf' />
             <StyledTopSectionTextDiv>
                 <DefaultParagraph textSize={'big'}>
                     {t('topSection.me')}

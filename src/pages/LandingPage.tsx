@@ -9,6 +9,8 @@ import Footer from "./Footer";
 import TextLink from "../components/textLink";
 import DefaultParagraph from "../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";
+// @ts-ignore
+import logo from '../assets/img/logo.png';
 
 type LandingPageProps = {
     navbarClickedButton?: string;
@@ -52,7 +54,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                 <DefaultCard
                     title = "Redesign of Climbing App"
                     content = "The Climbing Diary is an Android App for climbers and boulderers to log their projects and ascents. The goal of the case study is a redesign by focusing on the main functionalities the user expects from a climbing App. Therefore, we conducted a user survey and a comparison of other famous applications in this area."
-                    imgSrc = "src/assets/img/logo.jpg"
+                    imgSrc = {logo}
                     imgAlt = "test"
                     goToLink = "/casestudyclimbing"
                     labels={['Case Study', 'UX Research', 'UX&UI Design']}
