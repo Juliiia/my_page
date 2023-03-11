@@ -71,13 +71,17 @@ type NavbarProps = {
 const Navbar = ({onButtonClicked}:NavbarProps) => {
     const [t, i18n] = useTranslation('common');
     const navigate = useNavigate();
-    const [selectedLanguage, setSelectedLanguage] = useState('en');
+    const [selectedLanguage, setSelectedLanguage] = useState('de');
 
     const switchLanguage = () => {
-        let newLanguage = 'en';
-        if (selectedLanguage == 'en') newLanguage = 'de';
-        setSelectedLanguage(newLanguage);
-        i18n.changeLanguage(newLanguage);
+        if (selectedLanguage == 'en') return changeLanguage('de');
+        if (selectedLanguage == 'de') return changeLanguage('en');
+
+    }
+
+    const changeLanguage = (language:string) => {
+        i18n.changeLanguage(language);
+        setSelectedLanguage(language);
     }
 
     return (
