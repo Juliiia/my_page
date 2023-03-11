@@ -51,14 +51,14 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                     {t('uxui.section.content')}
                 </DefaultParagraph>
 
-                <DefaultCard
-                    title = "Redesign of Climbing App"
-                    content = "The Climbing Diary is an Android App for climbers and boulderers to log their projects and ascents. The goal of the case study is a redesign by focusing on the main functionalities the user expects from a climbing App. Therefore, we conducted a user survey and a comparison of other famous applications in this area."
-                    imgSrc = {logo}
-                    imgAlt = "test"
-                    goToLink = "/casestudyclimbing"
+                {/* <DefaultCard
+                    title="Redesign of Climbing App"
+                    content="The Climbing Diary is an Android App for climbers and boulderers to log their projects and ascents. The goal of the case study is a redesign by focusing on the main functionalities the user expects from a climbing App. Therefore, we conducted a user survey and a comparison of other famous applications in this area."
+                    imgSrc={logo}
+                    imgAlt="test"
+                    goToLink="/casestudyclimbing"
                     labels={['Case Study', 'UX Research', 'UX&UI Design']}
-                />
+                />*/}
             </DefaultSection>
 
             <span ref = {artSectionRef} id='art_section'/>

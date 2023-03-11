@@ -16,6 +16,8 @@ const StyledGalleryContainer = styled.div`
 
 const StyledImageContainer = styled.div`
     cursor: pointer;
+    max-height: 320px;
+    overflow: hidden;
     border: 5px solid ${constants.defaultBackgroundColor};
     &:hover {
         border: 5px solid ${(props: { topic: string}) => {
@@ -47,7 +49,7 @@ const StyledImageContainer = styled.div`
 
 const StyledImg = styled.img`    
     margin: auto;
-    max-height: 100%;
+    object-fit: cover;
 `;
 
 export interface ImageInfo {

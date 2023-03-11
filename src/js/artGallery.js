@@ -1,7 +1,7 @@
 import schmetterling from '../assets/img/Gallery/schmetterling.jpg'
 import eisblume from '../assets/img/Gallery/eisblumen.jpg'
 import beobachtering from '../assets/img/Gallery/beobachterin.jpg'
-import blumenschmetterling from '../assets/img/Gallery/blumen-schmetterling.jpg'
+import hausInArco from '../assets/img/Gallery/traumhaus.jpg'
 import zeit from '../assets/img/Gallery/Zeit.jpg'
 import start from '../assets/img/Gallery/Start.jpg'
 import guterWein from '../assets/img/Gallery/guter_wein.jpg'
@@ -9,6 +9,7 @@ import herbstZuWinter from '../assets/img/Gallery/herbst-zu-winter.jpg'
 import herbst from '../assets/img/Gallery/herbst.jpg'
 import luna from '../assets/img/Gallery/luna.jpg'
 import ethopia from '../assets/img/Gallery/Etiopia.jpg'
+import steinmaenchen from '../assets/img/Gallery/steinmaenchen.jpg'
 
 export const artGallery = [
     {
@@ -26,9 +27,9 @@ export const artGallery = [
         isSold: false,
     },
     {
-        title: "Blumenschmetterling",
+        title: "Haus in Arco",
         content: "todo",
-        src: blumenschmetterling,
+        src: hausInArco,
         size: "30x40cm",
         isSold: true,
     },
@@ -86,6 +87,13 @@ export const artGallery = [
         content: "todo",
         src: ethopia,
         size: "30x40cm",
+        isSold: false,
+    },
+    {
+        title: "Steinmänchen",
+        content: "todo",
+        src: steinmaenchen,
+        size: "21x14,8cm",
         isSold: false,
     },
 ];
