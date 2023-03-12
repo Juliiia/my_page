@@ -9,8 +9,6 @@ import Footer from "./Footer";
 import TextLink from "../components/textLink";
 import DefaultParagraph from "../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";
-// @ts-ignore
-import logo from '../assets/img/logo.png';
 
 type LandingPageProps = {
     navbarClickedButton?: string;
@@ -123,7 +121,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
 
             <DefaultSection
                 topic={"other"}
-                title={"About me"}
+                title={t('aboutMe.section.title')}
             >
                 <>
                     <DefaultParagraph>
@@ -134,7 +132,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                             t={t}
                             i18nKey='aboutMe.section.professional'
                             components={{
-                                link1: <TextLink topic={'others'} linkTo={'https://www.linkedin.com/in/julia-krause-b543a912a/'} newTab={true} />
+                                link1: <TextLink topic={'other'} linkTo={'https://www.linkedin.com/in/julia-krause-b543a912a/'} newTab={true} />
                             }}
                         />
                     </DefaultParagraph>

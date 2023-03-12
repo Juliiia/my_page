@@ -44,7 +44,7 @@ type ScrollToProps = {
 }
 
 type LinkToProps = {
-    topic: 'design' | 'art' | 'digital' | 'others';
+    topic: 'design' | 'art' | 'digital' | 'other';
     linkTo: string;
     newTab: boolean;
     children?: string | JSX.Element | JSX.Element[];
