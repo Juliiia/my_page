@@ -130,7 +130,13 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                         {t('aboutMe.section.personal')}
                     </DefaultParagraph>
                     <DefaultParagraph>
-                        {t('aboutMe.section.professional')}
+                        <Trans
+                            t={t}
+                            i18nKey='aboutMe.section.professional'
+                            components={{
+                                link1: <TextLink topic={'others'} linkTo={'https://www.linkedin.com/in/julia-krause-b543a912a/'} newTab={true} />
+                            }}
+                        />
                     </DefaultParagraph>
                     <DefaultParagraph>
                        {t('aboutMe.section.claim')}

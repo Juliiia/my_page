@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import constants from '../js/constants.js';
 import { useNavigate } from "react-router-dom";
 import {useTranslation} from "react-i18next";
-// @ts-ignore
 import logo from '../assets/img/logo.png';
 
 const StyledNavbarDiv = styled.div`
