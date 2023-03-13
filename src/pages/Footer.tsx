@@ -36,7 +36,7 @@ const Footer = () => {
         <StyledFooterContainer>
             <div></div>
             <StyledSocialLinkContainer>
-                <StyledSocialLink href="mailto:info@juliamucha.de?subject=Mail from juliamucha.de">
+                <StyledSocialLink href="mailto:mail@juliamucha.de?subject=Mail from juliamucha.de">
                     <StyledSocialImg src={envelope} alt="Mail" />
                 </StyledSocialLink>
                 <StyledSocialLink href="https://www.linkedin.com/in/julia-krause-b543a912a/" target="_blank">
