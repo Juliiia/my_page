@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import ImageLightBox from "./imageLightBox/imageLightBox";
 import constants from "../js/constants";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const StyledGalleryContainer = styled.div`
     display: grid;
@@ -89,7 +91,11 @@ const DefaultGallery = ({topic, imageCollection}:GalleryProps) => {
             <StyledGalleryContainer>
                 {imageCollection.map((data, key) => {
                     return <StyledImageContainer topic={topic} key={key} onClick={() => onImageClick(key)}>
-                        <StyledImg src={data.src} alt={data.title} />
+                        <LazyLoadImage
+                            src={data.src}
+                            alt={data.title}
+                            effect="blur"
+                        />
                     </StyledImageContainer>;
                 })}
 

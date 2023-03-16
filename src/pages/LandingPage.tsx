@@ -43,7 +43,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
             <span ref = {uxuiSectionRef} id='design_section'/>
             <DefaultSection
                 topic = "design"
-                title = "UX/UI Design"
+                title = {t('uxui.section.title')}
             >
                 <DefaultParagraph>
                     {t('uxui.section.content')}
