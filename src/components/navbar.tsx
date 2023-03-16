@@ -14,6 +14,7 @@ const StyledNavbarDiv = styled.div`
     align-items: center;
     justify-content: flex-start;
     background-color: ${constants.defaultBackgroundColor};
+    z-index: 100;
 `;
 
 const StyledNavbarItem = styled.div`
@@ -71,18 +72,6 @@ type NavbarProps = {
 const Navbar = ({onButtonClicked}:NavbarProps) => {
     const [t, i18n] = useTranslation('common');
     const navigate = useNavigate();
-    const [selectedLanguage, setSelectedLanguage] = useState('de');
-
-    const switchLanguage = () => {
-        if (selectedLanguage == 'en') return changeLanguage('de');
-        if (selectedLanguage == 'de') return changeLanguage('en');
-
-    }
-
-    const changeLanguage = (language:string) => {
-        i18n.changeLanguage(language);
-        setSelectedLanguage(language);
-    }
 
     return (
         <StyledNavbarDiv>
@@ -122,16 +111,6 @@ const Navbar = ({onButtonClicked}:NavbarProps) => {
                 >
                     Digital Art
                 </StyledNavbarLinkDigitalArt>
-            </StyledNavbarItem>
-
-            <StyledNavbarItem>
-                <a
-                    onClick={() => {
-                        switchLanguage()
-                    }}
-                >
-                    {selectedLanguage}
-                </a>
             </StyledNavbarItem>
         </StyledNavbarDiv>
     )

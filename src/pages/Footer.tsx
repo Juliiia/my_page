@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import constants from '../js/constants.js';
+import { LanguageSwitcher } from "../components/languageSwitcher";
 // @ts-ignore
-import envelope from '../assets/img/envelope.svg'
-// @ts-ignore
-import instagram from '../assets/img/instagram.png';
+import envelope from '../assets/img/envelope.svg';
 // @ts-ignore
 import linkedIn from '../assets/img/linkedin-logo.png';
 
@@ -13,7 +12,7 @@ const StyledFooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 20px 5px;
+    padding: 20px;
 `;
 
 const StyledSocialLinkContainer = styled.div`
@@ -34,7 +33,7 @@ const StyledSocialImg = styled.img`
 const Footer = () => {
     return (
         <StyledFooterContainer>
-            <div></div>
+            <LanguageSwitcher/>
             <StyledSocialLinkContainer>
                 <StyledSocialLink href="mailto:mail@juliamucha.de?subject=Mail from juliamucha.de">
                     <StyledSocialImg src={envelope} alt="Mail" />
