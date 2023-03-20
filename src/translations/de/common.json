@@ -1,36 +1,36 @@
 {
   "topSection": {
     "me": "Ich bin Julia. Schön, dass Du da bist!",
-    "IDo": "Ich mache <link1>UX & UI design</link1> mit dem Hintergrund als Softwareentwicklerin und ich bin passionierte Gestalterin, <link2>analog</link2> und <link3>digital</link3>."
-  },
+    "IDo": "Ich gestalte aus leidenschaft, <link2>analog</link2>, <link3>digital</link3> und <link1>UX/UI.</link1>"
+  }, 
   "uxui": {
     "section": {
-      "title": "UX & UI Design",
-      "content": "Ich tüftel gerne am UX- und UI-Design, damit Anwendungen nutzbarer werden und freundlicher aussehen. Ebenfalls gestalte und entwickle ich Webseiten. Dank meines Studiums, habe ich Hintergrundwissen aus der Softwareentwicklung, was die Planung und Umsetzung von neuen Interaktionskonzepten und Oberflächen vereinfacht."
+      "title": "UX/UI Design",
+      "content": "Ich tüftel gerne am UX/UI Design, damit Anwendungen nutzbarer werden und freundlicher aussehen. Ebenfalls gestalte und entwickle ich Webseiten. Dank meines Studiums habe ich vertieftes Hintergrundwissen aus der Softwareentwicklung, was die Planung und Umsetzung von neuen Interaktionskonzepten und Oberflächen vereinfacht."
     }
   },
   "fineArt": {
     "section": {
       "title": "Kunst - Formen und Farben",
-      "content": "Meine Kunst konzentriert sich auf Farben und Formen, die ich überwiegend mit Acryl- und Aquarellfarben erstelle. Ich reise viel und male in der Natur, daher experimentiere ich auch gerne mit Materialien aus meiner Umgebung, wie Sand und Blätter. Mehr Bilder unter <link1>@julia_farbe</link1>"
+      "content": "Meine Kunst konzentriert sich auf Farben und Formen, die ich überwiegend mit Acryl- und Aquarellfarben erstelle. Ich reise viel und male in der Natur, daher experimentiere ich auch gerne mit Materialien aus meiner Umgebung wie Sand und Blätter. Mehr Bilder unter <link1>@julia_farbe</link1>"
     },
     "exhibitions": {
       "title": "Ausstellungen",
       "content": "Ich habe zum ersten Mal im Rahmen von <link1>Kunst aus vielen Händen</link1> ausgestellt. Den Austausch mit anderen Künstlern und Kunstinteressierten finde ich sehr spannend, daher freue ich mich schon jetzt auf die nächste Ausstellungsmöglichkeit.",
-      "KaterMurr": "Die nächste Ausstellung wird am <strong>21.03.2023 im <link1>Kater Murr</link1> in Nürnberg</strong> beginnen zu den Öffnungszeiten der Bar. Anschließend bleiben die Bilder noch ein paar Wochen hängen. Ich freue mich sehr über Deinen Besuch."
+      "KaterMurr": "Die nächste Ausstellung wird am <strong>21.03.2023 im <link1>Kater Murr</link1> in Nürnberg</strong> beginnen zu den Öffnungszeiten der Bar. Anschließend bleiben die Bilder noch ein paar Wochen hängen. Ich freue mich sehr auf Deinen Besuch."
     }
   },
   "digital": {
     "section": {
       "title": "Digitale Kunst, Illustrationen & Monster",
-      "content": "Im Feld der digitalen Gestaltung entwickel ich gerne Schriften, Logos und Illustrationen. Dabei arbeite ich vorzugsweise mit Sketchbook und Procreate. Bei den Illustrationen haben es mir die Monster besonders angetan und dadurch ist im Laufe der Zeit eine kleine Sammlung entstanden: 'Monster für jede Situation'. Mehr Monster unter <link1>@monster.star.moon</link1>"
+      "content": "Im Feld der digitalen Gestaltung entwickle ich gerne Schriften, Logos und Illustrationen. Dabei arbeite ich vorzugsweise mit Sketchbook und Procreate. Bei den Illustrationen haben es mir die Monster besonders angetan und dadurch ist im Laufe der Zeit eine kleine Sammlung entstanden: 'Monster für jede Situation'. Mehr Monster unter <link1>@monster.star.moon</link1>"
     }
   },
   "aboutMe": {
     "section": {
-      "title": "Über",
-      "personal": "Ich bin Julia. Ich liebe es zu malen und zu gestalten analog, wie auch digital. Ebenfalls reise und klettere ich leidernschaftlich gerne. Unterwegs habe ich meistens Stifte und Notizbuch immer dabei. Wenn der Platz es zulässt, werden die Farben mit eingepackt.",
-      "professional": "Ich bin autodidaktische Designerin und Künstlerin. Ich habe Medieninformatik an der Technischen Universität Dresden studiert. Das Studium hat meinen Gestaltungsraum auf die digitale Welt erweitert und ich erlangte Wissen in der Softwarentwicklung. Mehr zu meinem Lebenslauf ist auf <link1>LinkedIn</link1> zu finden.",
+      "title": "Über mich",
+      "personal": "Ich bin Julia. Ich liebe es zu malen und zu gestalten, analog und digital. Ebenfalls reise und klettere ich leidenschaftlich gerne. Unterwegs habe ich meine Stifte und Notizbuch immer dabei. Wenn der Platz es zulässt, packe ich die Farben mit ein.",
+      "professional": "Ich bin autodidaktische Designerin und Künstlerin. Ich habe Medieninformatik an der Technischen Universität Dresden studiert. Das Studium hat meinen Gestaltungsraum auf die digitale Welt erweitert und mein Wissen in der Softwarentwicklung vertieft. Mehr zu meinem Lebenslauf findet Ihr auf <link1>LinkedIn</link1>.",
       "claim": "Ich liebe es, neue Ideen analog oder digital umzusetzen und bestehende Projekte kreativ und tatkräftig zu begleiten."
     }
   }

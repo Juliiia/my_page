@@ -10,7 +10,7 @@ export default {
     // font sizes
     fontSizeText: `${basicFontSize}px`,
     fontSizeSectionTitle: `${basicFontSize + 4}px`,
-    fontSizeBigText: `${basicFontSize + 10}px`,
+    fontSizeBigText: `${basicFontSize + 14}px`,
     fontSizeSmallText: `${basicFontSize - 4}px`,
 
     // color

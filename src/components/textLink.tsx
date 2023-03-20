@@ -13,7 +13,7 @@ const StyledLink = styled.a`
         } else if(props.topic == 'digital') {
             return constants.colorDigital0;
         } else if(props.topic == 'other') {
-            return constants.colorMe1;
+            return constants.colorGrey2;
         } else {
             return 'black';
         }
@@ -28,7 +28,7 @@ const StyledLink = styled.a`
             } else if(props.topic == 'digital') {
                 return constants.colorDigital1;
             } else if(props.topic == 'other') {
-                return constants.colorMe1;
+                return constants.colorGrey3;
             } else {
                 return 'black';
             }

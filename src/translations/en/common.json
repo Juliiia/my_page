@@ -1,12 +1,12 @@
 {
   "topSection": {
     "me": "I'm Julia, nice to have you here!",
-    "IDo": "I do <link1>UX & UI design</link1> with a developer background and I'm a passionate artist in both <link2>analog</link2> and <link3>digital</link3>."
+    "IDo": "I design with passion, <link2>analogue</link2>, <link3>digital</link3> and <link1>UX/UI.</link1>"
   },
   "uxui": {
     "section": {
-      "title": "UX & UI Design",
-      "content": "I do UX and UI design to make applications more usable and look friendlier. I also design and develop websites. Thanks to my studies, I have background knowledge from software development, which simplifies the planning and implementation of new interaction concepts and interfaces."
+      "title": "UX/UI Design",
+      "content": "I do UX/UI design to make applications more usable and look friendlier. I also design and develop websites. Thanks to my studies, I have background knowledge from software development, which simplifies the planning and implementation of new interaction concepts and interfaces."
     }
   },
   "fineArt": {
@@ -30,7 +30,7 @@
     "section": {
       "title": "About me",
       "personal": "I am Julia. I love to paint and design analogue as well as digital. Unfortunately, I also like to travel and climb. I always have a pen and notebook with me. If space allows, the colors will be included.",
-      "professional": "I am a self-taught designer and artist. I studied computer science of media at the Technical University of Dresden. That had expanded my design space to the digital world and I gained knowledge in software development. Finde my CV on <link1>LinkedIn</link1>.",
+      "professional": "I am a self-taught designer and artist. I studied computer science of media at the Technical University of Dresden. The course expanded my creative scope to the digital world and deepened my knowledge of software development. Finde my CV on <link1>LinkedIn</link1>.",
       "claim": "I love to plan and implement new ideas analogously or digitally and to accompany existing projects creatively and energetically."
     }
   }
