@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import TextLink from "../components/textLink";
 import DefaultParagraph from "../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";
+// @ts-ignore
 import bilder from "../assets/bilderliste.pdf"
 
 type LandingPageProps = {
