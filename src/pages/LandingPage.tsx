@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import TextLink from "../components/textLink";
 import DefaultParagraph from "../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";
+import bilder from "../assets/bilderliste.pdf"
 
 type LandingPageProps = {
     navbarClickedButton?: string;
@@ -97,6 +98,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                         i18nKey="fineArt.exhibitions.KaterMurr"
                         components={{
                             link1: <TextLink topic={'art'} linkTo={'https://kater-murr.com/'} newTab={true} />,
+                            link2: <TextLink topic={'art'} linkTo={bilder} newTab={true} />
                         }}
                     />
                 </DefaultParagraph>
