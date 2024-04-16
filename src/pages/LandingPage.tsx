@@ -91,13 +91,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
                 title={t('digital.section.title')}
             >
                 <DefaultParagraph>
-                    <Trans
-                        t={t}
-                        i18nKey='digital.section.content'
-                        components={{
-                            link1: <TextLink topic={'digital'} linkTo={'https://www.instagram.com/monster.star.moon/'} newTab={true} />
-                        }}
-                    />
+                    {t('digital.section.content')}
                 </DefaultParagraph>
                 <DefaultGallery topic={'digital'} imageCollection={monsterGallery} />
             </DefaultSection>
