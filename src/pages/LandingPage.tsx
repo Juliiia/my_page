@@ -1,6 +1,5 @@
 import React, {useEffect, useRef} from 'react';
 import DefaultSection from "../components/defaultSection";
-import DefaultCard from "../components/defaultCard";
 import DefaultGallery from "../components/defaultGallery";
 import {artGallery} from "../js/artGallery";
 import {monsterGallery} from "../js/monsterGallery";
@@ -41,25 +40,6 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
     return (
         <>
             <TopSection onScrollTo={scrollToSection}/>
-
-            <span ref = {uxuiSectionRef} id='design_section'/>
-            <DefaultSection
-                topic = "design"
-                title = {t('uxui.section.title')}
-            >
-                <DefaultParagraph>
-                    {t('uxui.section.content')}
-                </DefaultParagraph>
-
-                {/* <DefaultCard
-                    title="Redesign of Climbing App"
-                    content="The Climbing Diary is an Android App for climbers and boulderers to log their projects and ascents. The goal of the case study is a redesign by focusing on the main functionalities the user expects from a climbing App. Therefore, we conducted a user survey and a comparison of other famous applications in this area."
-                    imgSrc={logo}
-                    imgAlt="test"
-                    goToLink="/casestudyclimbing"
-                    labels={['Case Study', 'UX Research', 'UX&UI Design']}
-                />*/}
-            </DefaultSection>
 
             <span ref = {artSectionRef} id='art_section'/>
             <DefaultSection

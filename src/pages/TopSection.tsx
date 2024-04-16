@@ -52,7 +52,6 @@ const TopSection = ({onScrollTo}:TopSectionProps) => {
                             t={t}
                             i18nKey="topSection.IDo"
                             components={{
-                                link1: <TextLink topic={'design'} linkTo={'#design_section'} newTab={false} />,
                                 link2: <TextLink topic={'art'} linkTo={'#art_section'} newTab={false} />,
                                 link3: <TextLink topic={'digital'} linkTo={'#digital_section'} newTab={false} />
                             }}
