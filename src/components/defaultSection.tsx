@@ -9,7 +9,7 @@ const StyledSMainSectionDiv = styled.div`
     margin: 30px auto;
 `;
 
-const StyledTitle = styled.h1`
+const StyledColoredTitle = styled.h1`
     font-size: ${constants.fontSizeSectionTitle};
     color: ${(props: { topic: string, level: number }) => {
         if(props.level != 1){
@@ -29,19 +29,33 @@ const StyledTitle = styled.h1`
     font-weight: bold;
 `;
 
+const StyledTitle = styled.h1`
+    font-size: ${constants.fontSizeSectionTitle};
+    font-weight: bold;
+`;
+
+const StyledSubSectionTitle = styled.h2`
+    font-size: ${constants.fontSizeSubSectionTitle};
+    font-weight: bold;
+`;
+
 type SectionProps = {
-    topic: 'design' | 'art' | 'digital' | 'other';
+    topic?: 'design' | 'art' | 'digital' | 'other';
     level?: number;
     title: string | DefaultTFuncReturn | JSX.Element | JSX.Element[];
-    content?: string;
     children?: string | JSX.Element | JSX.Element[];
 };
 
-const DefaultSection = ({topic, level = 1, title, content, children}:SectionProps) => {
+const DefaultSection = ({topic, level = 1, title, children}:SectionProps) => {
 
     return (
         <StyledSMainSectionDiv>
-            <StyledTitle level={level} topic={topic}>{title}</StyledTitle>
+            {level == 1 ? 
+                <StyledTitle>{title}</StyledTitle>
+                :
+                <StyledSubSectionTitle>{title}</StyledSubSectionTitle>
+            }
+            
             {children}
         </StyledSMainSectionDiv>
     )

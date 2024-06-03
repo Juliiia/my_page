@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import {useTranslation} from "react-i18next";
-
-const StyledLink = styled.a`
-    cursor: pointer;
-`;
+import { StyledSimpleLink } from './linkElement.js';
 
 export const LanguageSwitcher = () => {
     const labelForGermanPage = 'switch to English';
@@ -25,12 +22,12 @@ export const LanguageSwitcher = () => {
     }
 
     return (
-        <StyledLink
+        <StyledSimpleLink
             onClick={() => {
                 switchLanguage()
             }}
         >
             {selectedLanguage}
-        </StyledLink>
+        </StyledSimpleLink>
     )
 }

@@ -15,7 +15,7 @@ const StyledLightBoxContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.8);
     display: ${(props: {isVisible:boolean}) => (props.isVisible? 'grid' : 'none')};
     grid-template-columns: 40px auto 40px;
     align-items: center;

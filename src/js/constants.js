@@ -9,9 +9,10 @@ export default {
 
     // font sizes
     fontSizeText: `${basicFontSize}px`,
-    fontSizeSectionTitle: `${basicFontSize + 4}px`,
-    fontSizeBigText: `${basicFontSize + 14}px`,
-    fontSizeSmallText: `${basicFontSize - 4}px`,
+    fontSizeSectionTitle: `${basicFontSize + 15}px`,
+    fontSizeSubSectionTitle: `${basicFontSize + 3}px`,
+    fontSizeBigText: `${basicFontSize + 15}px`,
+    fontSizeSmallText: `${basicFontSize - 3}px`,
 
     // color
     defaultTextColor: '#000000',
@@ -44,6 +45,7 @@ export default {
     colorGrey3: '#b2a1a6',
 
     // section colors
+    lightGrey: '#d3d3d3',
     darkSection: '#d1c7ca',
 
 }

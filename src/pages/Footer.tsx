@@ -6,9 +6,10 @@ import { LanguageSwitcher } from "../components/languageSwitcher";
 import envelope from '../assets/img/envelope.svg';
 // @ts-ignore
 import linkedIn from '../assets/img/linkedin-logo.png';
+import { IconLink } from '../components/linkElement.js';
 
 const StyledFooterContainer = styled.div`
-    background-color: ${constants.darkSection};
+    border-top: 1px solid;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -18,16 +19,7 @@ const StyledFooterContainer = styled.div`
 const StyledSocialLinkContainer = styled.div`
     display: flex;
     justify-content: flex-end;
-`;
-
-const StyledSocialLink = styled.a`
-    max-width: 40px;
-`;
-
-const StyledSocialImg = styled.img`
-    height: 35px;
-    max-width: inherit;
-    padding: 5px;
+    gap: 10px;
 `;
 
 const Footer = () => {
@@ -35,12 +27,8 @@ const Footer = () => {
         <StyledFooterContainer>
             <LanguageSwitcher/>
             <StyledSocialLinkContainer>
-                <StyledSocialLink href="mailto:mail@juliamucha.de?subject=Mail from juliamucha.de">
-                    <StyledSocialImg src={envelope} alt="Mail" />
-                </StyledSocialLink>
-                <StyledSocialLink href="https://www.linkedin.com/in/julia-krause-b543a912a/" target="_blank">
-                    <StyledSocialImg src={linkedIn} alt="LinkedIn" />
-                </StyledSocialLink>
+                <IconLink linkTo='mailto:mail@juliamucha.de?subject=Mail from juliamucha.de' icon={envelope} alt='mail address' />
+                <IconLink linkTo='https://www.linkedin.com/in/julia-mucha-b543a912a/' icon={linkedIn} alt='LinkedIn' />
             </StyledSocialLinkContainer>
         </StyledFooterContainer>
     )

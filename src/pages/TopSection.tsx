@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 import React from 'react';
 import constants from '../js/constants.js'
-import TextLink from "../components/textLink";
+import {TextLink, IconLink} from "../components/linkElement.js";
 import DefaultParagraph from "../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";
 // @ts-ignore
-import blattPng from '../assets/img/Blatt.png'
+import blattPng from '../assets/img/Blatt.png';
+// @ts-ignore
+import instagram from '../assets/icons/instagram.svg';
+// @ts-ignore
+import etsy from '../assets/icons/etsy.svg';
 
 const StyledTopSectionDiv = styled.div`
     margin: auto;
@@ -26,6 +30,12 @@ const StyledTopSectionTextDiv = styled.div`
     margin-right: auto;
     font-size: ${constants.fontSizeBigText};
     line-height: initial;
+`;
+
+const StyledSocialMediaLinks = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 `;
 
 const StyledImg = styled.img`    
@@ -58,6 +68,10 @@ const TopSection = ({onScrollTo}:TopSectionProps) => {
                         />
                     </>
                 </DefaultParagraph>
+                <StyledSocialMediaLinks>
+                    <IconLink icon={instagram} topic='art' alt='instagram' label={'julia_farbe'} linkTo='https://www.instagram.com/julia_farbe/' />
+                    <IconLink icon={etsy} topic='other' alt='etsy shop' label={'BlattFarben.etsy.com'} linkTo='https://blattfarben.etsy.com/'/>
+                </StyledSocialMediaLinks>
             </StyledTopSectionTextDiv>
         </StyledTopSectionDiv>
     )

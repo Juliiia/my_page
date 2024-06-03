@@ -14,6 +14,7 @@ const StyledLabel = styled.div`
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+    background-color: #ffffff;
 `;
 
 const StyledLink = styled.a`    

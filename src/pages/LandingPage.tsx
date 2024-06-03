@@ -5,7 +5,7 @@ import {artGallery} from "../js/artGallery";
 import {monsterGallery} from "../js/monsterGallery";
 import TopSection from "./TopSection";
 import Footer from "./Footer";
-import TextLink from "../components/textLink";
+import {TextLink} from "../components/linkElement";
 import DefaultParagraph from "../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";
 // @ts-ignore
@@ -60,7 +60,7 @@ const LandingPage = ({navbarClickedButton}:LandingPageProps) => {
             </DefaultSection>
 
             <DefaultSection
-                topic={"art"}
+                //topic={"art"}
                 level={2}
                 title={t('fineArt.exhibitions.title')}
             >

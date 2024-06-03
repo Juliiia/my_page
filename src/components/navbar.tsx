@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import {useTranslation} from "react-i18next";
 // @ts-ignore
 import logo from '../assets/img/logo.png';
+import { StyledSimpleLink } from './linkElement.js';
 
 const StyledNavbarDiv = styled.div`
 	height: 50px;
@@ -37,32 +38,14 @@ const StyledNavbarLink = styled.a`
     color: ${constants.defaultTextColor};
 `;
 
-const StyledNavbarLinkDesign = styled(StyledNavbarLink)`
+/*const StyledNavbarLinkDesign = styled(StyledNavbarLink)`
     background-color: ${constants.colorDesign0};
     font-size: ${constants.fontSizeText};
     :hover {
         color: ${constants.defaultTextColor};
         background-color: ${constants.colorDesign1};
     }
-`;
-
-const StyledNavbarLinkArt = styled(StyledNavbarLink)`
-    background-color: ${constants.colorArt0};
-    font-size: ${constants.fontSizeText};
-    :hover {
-        color: ${constants.defaultTextColor};
-        background-color: ${constants.colorArt1};
-    }
-`;
-
-const StyledNavbarLinkDigitalArt = styled(StyledNavbarLink)`
-    background-color: ${constants.colorDigital0};
-    font-size: ${constants.fontSizeText};
-    :hover {
-        color: ${constants.defaultTextColor};
-        background-color: ${constants.colorDigital1};
-    }
-`;
+`;*/
 
 type NavbarProps = {
     onButtonClicked:(c: string) => void;
@@ -83,23 +66,25 @@ const Navbar = ({onButtonClicked}:NavbarProps) => {
             />
 
             <StyledNavbarItem>
-                <StyledNavbarLinkArt
+                <StyledSimpleLink
                     onClick={() => {
                         onButtonClicked('art');
                     }}
                 >
                     Fine Art
-                </StyledNavbarLinkArt>
+                </StyledSimpleLink>
             </StyledNavbarItem>
 
+&
+
             <StyledNavbarItem>
-                <StyledNavbarLinkDigitalArt
+                <StyledSimpleLink
                     onClick={() => {
                         onButtonClicked('digital');
                     }}
                 >
                     Digital Art
-                </StyledNavbarLinkDigitalArt>
+                </StyledSimpleLink>
             </StyledNavbarItem>
         </StyledNavbarDiv>
     )

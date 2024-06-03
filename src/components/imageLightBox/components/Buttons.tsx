@@ -47,6 +47,7 @@ const StyledLink = styled.a`
 const StyledLinkImg = styled.img`    
     max-width: 100%;
     height: inherit;
+    padding: 10px;
 `;
 
 export const PreviousIcon = () => {

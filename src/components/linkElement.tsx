@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import constants from '../js/constants.js'
 
-const StyledLink = styled.a`
+/*const StyledColorLink = styled.a`
     cursor: pointer;
     color: ${constants.defaultTextColor};
     background-color: ${(props: { topic: string; }) => {
@@ -15,7 +15,7 @@ const StyledLink = styled.a`
         } else if(props.topic == 'other') {
             return constants.colorGrey2;
         } else {
-            return 'black';
+            return 'transparent';
         }
     }};
     &:hover {
@@ -30,11 +30,42 @@ const StyledLink = styled.a`
             } else if(props.topic == 'other') {
                 return constants.colorGrey3;
             } else {
-                return 'black';
+                return 'transparent';
             }
         }};
         text-decoration: none;
   }
+`;*/
+
+const StyledColorLink = styled.a`
+    padding: 3px;
+    text-decoration: none;
+    background-color: ${constants.colorArt0};
+    &:hover {
+        background-color: ${constants.colorArt1};
+        text-decoration: none;
+    }
+`;
+
+export const StyledSimpleLink = styled.a`
+    text-decoration: underline;
+    &:hover {
+        background-color: ${constants.colorArt1};
+        text-decoration: none;
+    }
+`;
+
+const StyledIconLabelDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+`;
+
+const StyledSocialImg = styled.img`
+    height: 45px;
+    max-width: inherit;
+    padding: 5px;
 `;
 
 type ScrollToProps = {
@@ -50,6 +81,14 @@ type LinkToProps = {
     children?: string | JSX.Element | JSX.Element[];
 }
 
+type IconLinkTo = {
+    topic?: 'design' | 'art' | 'digital' | 'other';
+    icon: string;
+    alt: string;
+    linkTo: string;
+    label?: string;
+}
+
 type GeneralTypes = ScrollToProps | LinkToProps;
 
 const isLinkToComponent = (props: GeneralTypes): props is LinkToProps => {
@@ -62,24 +101,23 @@ const isScrollToProps = (props: GeneralTypes): props is ScrollToProps => {
 
 const ScrollToComponent = (props:ScrollToProps) => {
     return (
-        <StyledLink
-            topic={props.topic}
+        <StyledSimpleLink
             onClick={() => props.scrollTo('test')}
         >
             {props.children}
-        </StyledLink>
+        </StyledSimpleLink>
     )
 }
 
 const LinkToComponent = (props:LinkToProps) => {
     if(props.newTab) {
-        return <StyledLink topic={props.topic} href={props.linkTo} target="_blank"> {props.children} </StyledLink>
+        return <StyledSimpleLink href={props.linkTo} target="_blank"> {props.children} </StyledSimpleLink>
     } else {
-        return <StyledLink topic={props.topic} href={props.linkTo}> {props.children} </StyledLink>
+        return <StyledSimpleLink href={props.linkTo}> {props.children} </StyledSimpleLink>
     }
 }
 
-const TextLink = (props: GeneralTypes) => {
+export const TextLink = (props: GeneralTypes) => {
     if(isLinkToComponent(props)){
         return <LinkToComponent {...props} children={props.children} />;
     } else if(isScrollToProps(props)) {
@@ -89,4 +127,13 @@ const TextLink = (props: GeneralTypes) => {
     }
 };
 
-export default TextLink;
+export const IconLink = (props:IconLinkTo) => {
+    return (
+        <StyledColorLink href={props.linkTo} target="_blank">
+            <StyledIconLabelDiv>
+                <StyledSocialImg src={props.icon} alt={props.alt}/>
+                {props.label && props.label}
+            </StyledIconLabelDiv>
+        </StyledColorLink>
+    )
+}

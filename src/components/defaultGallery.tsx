@@ -16,7 +16,7 @@ const StyledGalleryContainer = styled.div`
     }
 `;
 
-const StyledImageContainer = styled.div`
+const StyledColoredImageContainer = styled.div`
     cursor: pointer;
     max-height: 320px;
     overflow: hidden;
@@ -47,6 +47,17 @@ const StyledImageContainer = styled.div`
                 return 'black';
             }}};
         }
+`;
+
+const StyledImageContainer = styled.div`
+    cursor: pointer;
+    max-height: 320px;
+    overflow: hidden;
+    display: flex;
+    border: 5px solid transparent;
+    &:hover {
+        border: 5px solid ${constants.colorArt2};
+    }
 `;
 
 const StyledImg = styled.img`    
@@ -90,7 +101,7 @@ const DefaultGallery = ({topic, imageCollection}:GalleryProps) => {
         <>
             <StyledGalleryContainer>
                 {imageCollection.map((data, key) => {
-                    return <StyledImageContainer topic={topic} key={key} onClick={() => onImageClick(key)}>
+                    return <StyledImageContainer key={key} onClick={() => onImageClick(key)}>
                         <LazyLoadImage
                             src={data.src}
                             alt={data.title}
