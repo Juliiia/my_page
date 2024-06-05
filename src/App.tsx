@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import {RouteObject} from "react-router";
 import LandingPage from "./pages/landingPage/LandingPage";
 import CSClimbingPage from "./pages/CSClimbingPage";
+import CodingChallengePage from './pages/codingChallengePage/CodingChallengePage';
 
 function App() {
     const [navbarButtonClicked, setNavbarButtonClicked] = useState('');
@@ -16,6 +17,10 @@ function App() {
         {
             path: 'casestudyclimbing',
             element: <CSClimbingPage />,
+        },
+        {
+            path: 'codingChallenge',
+            element: <CodingChallengePage />,
         },
     ];
 
