@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import constants from '../js/constants.js';
-import { LanguageSwitcher } from "../components/languageSwitcher";
+import { LanguageSwitcher } from "../../components/languageSwitcher.js";
 // @ts-ignore
-import envelope from '../assets/img/envelope.svg';
+import envelope from '../../assets/img/envelope.svg';
 // @ts-ignore
-import linkedIn from '../assets/img/linkedin-logo.png';
-import { IconLink } from '../components/linkElement.js';
+import linkedIn from '../../assets/img/linkedin-logo.png';
+import { IconLink } from '../../components/linkElement.js';
 
 const StyledFooterContainer = styled.div`
     border-top: 1px solid;

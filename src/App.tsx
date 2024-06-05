@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { useRoutes } from 'react-router-dom';
 import Navbar from "./components/navbar";
 import {RouteObject} from "react-router";
-import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/landingPage/LandingPage";
 import CSClimbingPage from "./pages/CSClimbingPage";
 
 function App() {

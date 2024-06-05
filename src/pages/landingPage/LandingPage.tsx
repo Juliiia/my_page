@@ -1,15 +1,15 @@
 import React, {useEffect, useRef} from 'react';
-import DefaultSection from "../components/defaultSection";
-import DefaultGallery from "../components/defaultGallery";
-import {artGallery} from "../js/artGallery";
-import {monsterGallery} from "../js/monsterGallery";
+import DefaultSection from "../../components/defaultSection";
+import DefaultGallery from "../../components/defaultGallery";
+import {artGallery} from "../../js/artGallery";
+import {monsterGallery} from "../../js/monsterGallery";
 import TopSection from "./TopSection";
 import Footer from "./Footer";
-import {TextLink} from "../components/linkElement";
-import DefaultParagraph from "../components/defaultParagraph";
+import {TextLink} from "../../components/linkElement";
+import DefaultParagraph from "../../components/defaultParagraph";
 import {Trans, useTranslation} from "react-i18next";
 // @ts-ignore
-import bilder from "../assets/bilderliste.pdf"
+import bilder from "../../assets/bilderliste.pdf"
 
 type LandingPageProps = {
     navbarClickedButton?: string;

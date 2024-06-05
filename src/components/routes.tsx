@@ -1,6 +1,6 @@
 import React from "react";
 import {RouteObject} from "react-router";
-import LandingPage from "../pages/LandingPage";
+import LandingPage from "../pages/landingPage/LandingPage";
 import CSClimbingPage from "../pages/CSClimbingPage";
 import Bilderliste from "../components/bilderliste";
 

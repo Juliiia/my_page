@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import React from 'react';
-import constants from '../js/constants.js'
-import {TextLink, IconLink} from "../components/linkElement.js";
-import DefaultParagraph from "../components/defaultParagraph";
+import constants from '../../js/constants.js'
+import {TextLink, IconLink} from "../../components/linkElement.js";
+import DefaultParagraph from "../../components/defaultParagraph.js";
 import {Trans, useTranslation} from "react-i18next";
 // @ts-ignore
-import blattPng from '../assets/img/Blatt.png';
+import blattPng from '../../assets/img/Blatt.png';
 // @ts-ignore
-import instagram from '../assets/icons/instagram.svg';
+import instagram from '../../assets/icons/instagram.svg';
 // @ts-ignore
-import etsy from '../assets/icons/etsy.svg';
+import etsy from '../../assets/icons/etsy.svg';
 
 const StyledTopSectionDiv = styled.div`
     margin: auto;
